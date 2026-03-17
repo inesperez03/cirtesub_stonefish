@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<robot name="cirtesu" xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <material name="cirtesu_material">
+    <texture filename="package://cirtesub_stonefish/resources/cirtesu/tank_tex.png"/>
+  </material>
+
+  <material name="poster_material">
+    <texture filename="package://cirtesub_stonefish/resources/cirtesu/poster_pool_small_tex.png"/>
+  </material>
+
+  <link name="cirtesu_tank">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://cirtesub_stonefish/resources/cirtesu/cirtesu.dae" scale="1 1 1"/>
+      </geometry>
+      <material name="poster_material"/>
+    </visual>
+  </link>
+
+</robot>

@@ -1,0 +1,1324 @@
+<?xml version="1.0"?>
+<scenario>
+    <looks>
+        <look name="black" gray="0.01" roughness="0.2" metalness="0.0"/>
+        <look name="yellow" rgb="1.0 0.9 0.0" roughness="0.3"/>
+    </looks>
+
+	<looks>
+		<look name="blue" rgb="0.0 0.3 0.8" roughness="0.0"/>
+        <look name="transparent" gray="1.0" roughness="0.0" metalness="0.0"/>
+        <look name="yellow" rgb="1.0 0.0 0.0" roughness="1.0"/>
+		<look name="black" gray="0.01" roughness="0.3" metalness="0.2" />
+		<look name="gray" gray="0.5" roughness="0.08" metalness="1.0" reflection="0.1"/>
+    </looks>    
+
+	<robot name="cirtesub" fixed="false" self_collisions="false">
+		<base_link name="Vehicle" type="compound" physics="submerged">
+			<external_part name="base_down" type="model" physics="submerged" buoyant="false">
+				<physical>
+					<mesh filename="cirtesub/base_down_phy.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</physical>
+				<visual>
+					<mesh filename="cirtesub/base_down.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</visual>
+				<material name="Polyamid"/>
+				<mass value="1.891"/>
+				<look name="gray"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</external_part>
+			<external_part name="base_viga_1" type="model" physics="submerged" buoyant="false">
+				<physical>
+					<mesh filename="cirtesub/base_viga_1_phy.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</physical>
+				<visual>
+					<mesh filename="cirtesub/base_viga_1.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</visual>
+				<material name="Polyamid"/>
+				<mass value="0.1"/>
+				<look name="gray"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</external_part>
+			<external_part name="base_viga_2" type="model" physics="submerged" buoyant="false">
+				<physical>
+					<mesh filename="cirtesub/base_viga_2_phy.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</physical>
+				<visual>
+					<mesh filename="cirtesub/base_viga_2.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</visual>
+				<material name="Polyamid"/>
+				<mass value="0.1"/>
+				<look name="gray"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</external_part>
+			<external_part name="base_viga_3" type="model" physics="submerged" buoyant="false">
+				<physical>
+					<mesh filename="cirtesub/base_viga_3_phy.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</physical>
+				<visual>
+					<mesh filename="cirtesub/base_viga_3.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</visual>
+				<material name="Polyamid"/>
+				<mass value="0.1"/>
+				<look name="gray"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</external_part>
+			<external_part name="base_viga_4" type="model" physics="submerged" buoyant="false">
+				<physical>
+					<mesh filename="cirtesub/base_viga_4_phy.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</physical>
+				<visual>
+					<mesh filename="cirtesub/base_viga_4.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</visual>
+				<material name="Polyamid"/>
+				<mass value="0.1"/>
+				<look name="gray"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</external_part>
+			<external_part name="base_top" type="model" physics="submerged" buoyant="false">
+				<physical>
+					<mesh filename="cirtesub/base_top_phy.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</physical>
+				<visual>
+					<mesh filename="cirtesub/base_top.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</visual>
+				<material name="Polyamid"/>
+				<mass value="3.93"/>
+				<look name="gray"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</external_part>
+			<external_part name="tubos_down" type="model" physics="submerged" buoyant="false">
+				<physical>
+					<mesh filename="cirtesub/tubos_down_phy.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</physical>
+				<visual>
+					<mesh filename="cirtesub/tubos_down.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</visual>
+				<material name="Polyamid"/>
+				<mass value="7.9"/>
+				<look name="transparent"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</external_part>
+			<external_part name="tubos_down_detalles" type="model" physics="submerged" buoyant="false">
+				<physical>
+					<mesh filename="cirtesub/tubos_down_detalles_phy.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</physical>
+				<visual>
+					<mesh filename="cirtesub/tubos_down_detalles.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</visual>
+				<material name="Polyamid"/>
+				<mass value="0.7"/>
+				<look name="black"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</external_part>
+			<external_part name="box_right" type="model" physics="submerged" buoyant="false">
+				<physical>
+					<mesh filename="cirtesub/box_right_phy.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</physical>
+				<visual>
+					<mesh filename="cirtesub/box_right.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</visual>
+				<material name="Polyamid"/>
+				<mass value="8.7"/>
+				<look name="black"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</external_part>
+			<external_part name="box_left" type="model" physics="submerged" buoyant="false">
+				<physical>
+					<mesh filename="cirtesub/box_left_phy.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</physical>
+				<visual>
+					<mesh filename="cirtesub/box_left.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</visual>
+				<material name="Polyamid"/>
+				<mass value="8.0"/>
+				<look name="black"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</external_part>
+			<external_part name="handle_1" type="model" physics="submerged" buoyant="false">
+				<physical>
+					<mesh filename="cirtesub/handle_1_phy.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</physical>
+				<visual>
+					<mesh filename="cirtesub/handle_1.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</visual>
+				<material name="Polyamid"/>
+				<mass value="1.0"/>
+				<look name="black"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</external_part>
+			<external_part name="handle_2" type="model" physics="submerged" buoyant="false">
+				<physical>
+					<mesh filename="cirtesub/handle_2_phy.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</physical>
+				<visual>
+					<mesh filename="cirtesub/handle_2.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</visual>
+				<material name="Polyamid"/>
+				<mass value="1.0"/>
+				<look name="black"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</external_part>
+			<!-- Tapas flotabilidad -->
+			<external_part name="flotar_1" type="model" physics="submerged" buoyant="true">
+				<physical>
+					<mesh filename="cirtesub/flotar_1_phy.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</physical>
+				<visual>
+					<mesh filename="cirtesub/flotar_1.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</visual>
+				<material name="Foam"/>
+				<mass value="0.16"/>
+				<look name="blue"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</external_part>
+			<external_part name="flotar_2" type="model" physics="submerged" buoyant="true">
+				<physical>
+					<mesh filename="cirtesub/flotar_2_phy.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</physical>
+				<visual>
+					<mesh filename="cirtesub/flotar_2.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</visual>
+				<material name="Foam"/>
+				<mass value="0.16"/>
+				<look name="blue"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</external_part>
+			<external_part name="flotar_3" type="model" physics="submerged" buoyant="true">
+				<physical>
+					<mesh filename="cirtesub/flotar_3_phy.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</physical>
+				<visual>
+					<mesh filename="cirtesub/flotar_3.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</visual>
+				<material name="Foam"/>
+				<mass value="0.16"/>
+				<look name="blue"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</external_part>
+			<external_part name="flotar_4" type="model" physics="submerged" buoyant="true">
+				<physical>
+					<mesh filename="cirtesub/flotar_4_phy.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</physical>
+				<visual>
+					<mesh filename="cirtesub/flotar_4.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</visual>
+				<material name="Foam"/>
+				<mass value="0.16"/>
+				<look name="blue"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</external_part>
+			<external_part name="flotar_5" type="model" physics="submerged" buoyant="true">
+				<physical>
+					<mesh filename="cirtesub/flotar_5_phy.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</physical>
+				<visual>
+					<mesh filename="cirtesub/flotar_5.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</visual>
+				<material name="Foam"/>
+				<mass value="0.16"/>
+				<look name="blue"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</external_part>
+			<external_part name="flotar_6" type="model" physics="submerged" buoyant="true">
+				<physical>
+					<mesh filename="cirtesub/flotar_6_phy.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</physical>
+				<visual>
+					<mesh filename="cirtesub/flotar_6.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</visual>
+				<material name="Foam"/>
+				<mass value="0.16"/>
+				<look name="blue"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</external_part>
+			<external_part name="flotar_7" type="model" physics="submerged" buoyant="true">
+				<physical>
+					<mesh filename="cirtesub/flotar_7_phy.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</physical>
+				<visual>
+					<mesh filename="cirtesub/flotar_7.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</visual>
+				<material name="Foam"/>
+				<mass value="0.16"/>
+				<look name="blue"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</external_part>
+			<external_part name="flotar_8" type="model" physics="submerged" buoyant="true">
+				<physical>
+					<mesh filename="cirtesub/flotar_8_phy.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</physical>
+				<visual>
+					<mesh filename="cirtesub/flotar_8.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</visual>
+				<material name="Polyamid"/>
+				<mass value="0.16"/>
+				<look name="blue"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</external_part>
+
+			<!-- Parte externa thrusters -->
+			<external_part name="duct_up_front" type="model" physics="submerged" buoyant="false">
+				<physical>
+					<mesh filename="cirtesub/duct_up_front.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</physical>
+				<visual>
+					<mesh filename="cirtesub/duct_up_front.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</visual>
+				<material name="Polyamid"/>
+				<mass value="1.15"/>
+				<look name="black"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</external_part>
+			<external_part name="duct_up_left" type="model" physics="submerged" buoyant="false">
+				<physical>
+					<mesh filename="cirtesub/duct_up_left.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</physical>
+				<visual>
+					<mesh filename="cirtesub/duct_up_left.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</visual>
+				<material name="Polyamid"/>
+				<mass value="1.15"/>
+				<look name="black"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</external_part>
+			<external_part name="duct_up_back" type="model" physics="submerged" buoyant="false">
+				<physical>
+					<mesh filename="cirtesub/duct_up_back.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</physical>
+				<visual>
+					<mesh filename="cirtesub/duct_up_back.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</visual>
+				<material name="Polyamid"/>
+				<mass value="1.15"/>
+				<look name="black"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</external_part>
+			<external_part name="duct_up_right" type="model" physics="submerged" buoyant="false">
+				<physical>
+					<mesh filename="cirtesub/duct_up_right.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</physical>
+				<visual>
+					<mesh filename="cirtesub/duct_up_right.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</visual>
+				<material name="Polyamid"/>
+				<mass value="1.15"/>
+				<look name="black"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</external_part>
+			<external_part name="duct_down_frontright" type="model" physics="submerged" buoyant="false">
+				<physical>
+					<mesh filename="cirtesub/duct_down_frontright.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</physical>
+				<visual>
+					<mesh filename="cirtesub/duct_down_frontright.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</visual>
+				<material name="Polyamid"/>
+				<mass value="1.15"/>
+				<look name="black"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</external_part>
+			<external_part name="duct_down_frontleft" type="model" physics="submerged" buoyant="false">
+				<physical>
+					<mesh filename="cirtesub/duct_down_frontleft.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</physical>
+				<visual>
+					<mesh filename="cirtesub/duct_down_frontleft.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</visual>
+				<material name="Polyamid"/>
+				<mass value="1.15"/>
+				<look name="black"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</external_part>
+			<external_part name="duct_down_backleft" type="model" physics="submerged" buoyant="false">
+				<physical>
+					<mesh filename="cirtesub/duct_down_backleft.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</physical>
+				<visual>
+					<mesh filename="cirtesub/duct_down_backleft.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</visual>
+				<material name="Polyamid"/>
+				<mass value="1.15"/>
+				<look name="black"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</external_part>
+			<external_part name="duct_down_backright" type="model" physics="submerged" buoyant="false">
+				<physical>
+					<mesh filename="cirtesub/duct_down_backright.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</physical>
+				<visual>
+					<mesh filename="cirtesub/duct_down_backright.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</visual>
+				<material name="Polyamid"/>
+				<mass value="1.15"/>
+				<look name="black"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</external_part>
+			<external_part name="anclaje_alpha_dch" type="model" physics="submerged" buoyant="false">
+				<physical>
+					<mesh filename="cirtesub/anclaje_alpha_dch.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</physical>
+				<visual>
+					<mesh filename="cirtesub/anclaje_alpha_dch.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</visual>
+				<material name="Polyamid"/>
+				<mass value="0.01"/>
+				<look name="black"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</external_part>
+			<external_part name="anclaje_alpha_izq" type="model" physics="submerged" buoyant="false">
+				<physical>
+					<mesh filename="cirtesub/anclaje_alpha_izq.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</physical>
+				<visual>
+					<mesh filename="cirtesub/anclaje_alpha_izq.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</visual>
+				<material name="Polyamid"/>
+				<mass value="0.01"/>
+				<look name="black"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</external_part>
+			<!-- Partes flotantes -->
+			<internal_part name="aire_caja_1" type="model" physics="submerged" buoyant="false">
+				<physical>
+					<mesh filename="cirtesub/aire_caja1.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</physical>
+				<visual>
+					<mesh filename="cirtesub/aire_caja1.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</visual>
+				<material name="Air"/>
+				<look name="gray"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</internal_part>
+			<internal_part name="aire_caja_2" type="model" physics="submerged" buoyant="true">
+				<physical>
+					<mesh filename="cirtesub/aire_caja2.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</physical>
+				<visual>
+					<mesh filename="cirtesub/aire_caja2.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</visual>
+				<material name="Air"/>
+				<look name="gray"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</internal_part>
+			<internal_part name="flotar1" type="cylinder" physics="submerged" buoyant="true">
+				<dimensions radius="0.05" height="0.2"/>
+				<origin rpy="-1.57 0.0 1.08" xyz="-0.273786 -0.121939 0.204755"/>
+				<material name="Foam"/>
+				<mass value="0.08"/>
+				<look name="manipulator"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</internal_part> 
+			<internal_part name="flotar2" type="cylinder" physics="submerged" buoyant="true">
+				<dimensions radius="0.05" height="0.2"/>
+				<origin rpy="-1.57 0.0 -1.08" xyz="-0.273786 0.160872 0.204755"/>
+				<material name="Foam"/>
+				<mass value="0.08"/>
+				<look name="manipulator"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</internal_part> 
+			<internal_part name="flotar3" type="cylinder" physics="submerged" buoyant="true">
+				<dimensions radius="0.05" height="0.2"/>
+				<origin rpy="1.57 0.0 -1.08" xyz="0.287265 -0.121939 0.204755"/>
+				<material name="Foam"/>
+				<mass value="0.08"/>
+				<look name="manipulator"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</internal_part> 
+			<internal_part name="flotar4" type="cylinder" physics="submerged" buoyant="true">
+				<dimensions radius="0.05" height="0.2"/>
+				<origin rpy="1.57 0.0 1.08" xyz="0.287265 0.121939 0.204755"/>
+				<material name="Foam"/>
+				<mass value="0.08"/>
+				<look name="manipulator"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</internal_part> 
+			<internal_part name="flotar5" type="cylinder" physics="submerged" buoyant="true">
+				<dimensions radius="0.05" height="0.15"/>
+				<origin rpy="0.925025 1.57 0.0" xyz="-0.135511 -0.255895 0.204755"/>
+				<material name="Foam"/>
+				<mass value="0.08"/>
+				<look name="manipulator"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</internal_part> 
+			<internal_part name="flotar6" type="cylinder" physics="submerged" buoyant="true">
+				<dimensions radius="0.05" height="0.15"/>
+				<origin rpy="-0.925025 1.57 0.0" xyz="0.145937 -0.255895 0.204755"/>
+				<material name="Foam"/>
+				<mass value="0.08"/>
+				<look name="manipulator"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</internal_part> 
+			<internal_part name="flotar7" type="cylinder" physics="submerged" buoyant="true">
+				<dimensions radius="0.05" height="0.15"/>
+				<origin rpy="-0.925025 1.57 0.0" xyz="-0.135511 0.294901 0.204755"/>
+				<material name="Foam"/>
+				<mass value="0.08"/>
+				<look name="manipulator"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</internal_part> 
+			<internal_part name="flotar8" type="cylinder" physics="submerged" buoyant="true">
+				<dimensions radius="0.05" height="0.15"/>
+				<origin rpy="0.925025 1.57 0.0" xyz="0.145937 0.294901 0.204755"/>
+				<material name="Foam"/>
+				<mass value="0.08"/>
+				<look name="manipulator"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</internal_part> 
+			<internal_part name="flotar1" type="cylinder" physics="submerged" buoyant="true">
+				<dimensions radius="0.05" height="0.2"/>
+				<origin rpy="-1.57 0.0 1.08" xyz="-0.273786 -0.121939 0.204755"/>
+				<material name="Foam"/>
+				<mass value="0.08"/>
+				<look name="manipulator"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</internal_part> 
+			<internal_part name="flotar2" type="cylinder" physics="submerged" buoyant="true">
+				<dimensions radius="0.05" height="0.2"/>
+				<origin rpy="-1.57 0.0 -1.08" xyz="-0.273786 0.160872 0.204755"/>
+				<material name="Foam"/>
+				<mass value="0.08"/>
+				<look name="manipulator"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</internal_part> 
+			<internal_part name="flotar3" type="cylinder" physics="submerged" buoyant="true">
+				<dimensions radius="0.05" height="0.2"/>
+				<origin rpy="1.57 0.0 -1.08" xyz="0.287265 -0.121939 0.204755"/>
+				<material name="Foam"/>
+				<mass value="0.08"/>
+				<look name="manipulator"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</internal_part> 
+			<internal_part name="flotar4" type="cylinder" physics="submerged" buoyant="true">
+				<dimensions radius="0.05" height="0.2"/>
+				<origin rpy="1.57 0.0 1.08" xyz="0.287265 0.121939 0.204755"/>
+				<material name="Foam"/>
+				<mass value="0.08"/>
+				<look name="manipulator"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</internal_part> 
+			<internal_part name="flotar5" type="cylinder" physics="submerged" buoyant="true">
+				<dimensions radius="0.05" height="0.15"/>
+				<origin rpy="0.925025 1.57 0.0" xyz="-0.135511 -0.255895 0.204755"/>
+				<material name="Foam"/>
+				<mass value="0.08"/>
+				<look name="manipulator"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</internal_part> 
+			<internal_part name="flotar6" type="cylinder" physics="submerged" buoyant="true">
+				<dimensions radius="0.05" height="0.15"/>
+				<origin rpy="-0.925025 1.57 0.0" xyz="0.145937 -0.255895 0.204755"/>
+				<material name="Foam"/>
+				<mass value="0.08"/>
+				<look name="manipulator"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</internal_part> 
+			<internal_part name="flotar7" type="cylinder" physics="submerged" buoyant="true">
+				<dimensions radius="0.05" height="0.15"/>
+				<origin rpy="-0.925025 1.57 0.0" xyz="-0.135511 0.294901 0.204755"/>
+				<material name="Foam"/>
+				<mass value="0.08"/>
+				<look name="manipulator"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</internal_part> 
+			<internal_part name="flotar8" type="cylinder" physics="submerged" buoyant="true">
+				<dimensions radius="0.05" height="0.15"/>
+				<origin rpy="0.925025 1.57 0.0" xyz="0.145937 0.294901 0.204755"/>
+				<material name="Foam"/>
+				<mass value="0.08"/>
+				<look name="manipulator"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</internal_part> 
+			<internal_part name="flotar1" type="cylinder" physics="submerged" buoyant="true">
+				<dimensions radius="0.05" height="0.2"/>
+				<origin rpy="-1.57 0.0 1.08" xyz="-0.273786 -0.121939 0.204755"/>
+				<material name="Foam"/>
+				<mass value="0.08"/>
+				<look name="manipulator"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</internal_part> 
+			<internal_part name="flotar2" type="cylinder" physics="submerged" buoyant="true">
+				<dimensions radius="0.05" height="0.2"/>
+				<origin rpy="-1.57 0.0 -1.08" xyz="-0.273786 0.160872 0.204755"/>
+				<material name="Foam"/>
+				<mass value="0.08"/>
+				<look name="manipulator"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</internal_part> 
+			<internal_part name="flotar3" type="cylinder" physics="submerged" buoyant="true">
+				<dimensions radius="0.05" height="0.2"/>
+				<origin rpy="1.57 0.0 -1.08" xyz="0.287265 -0.121939 0.204755"/>
+				<material name="Foam"/>
+				<mass value="0.08"/>
+				<look name="manipulator"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</internal_part> 
+			<internal_part name="flotar4" type="cylinder" physics="submerged" buoyant="true">
+				<dimensions radius="0.05" height="0.2"/>
+				<origin rpy="1.57 0.0 1.08" xyz="0.287265 0.121939 0.204755"/>
+				<material name="Foam"/>
+				<mass value="0.08"/>
+				<look name="manipulator"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</internal_part> 
+			<internal_part name="flotar5" type="cylinder" physics="submerged" buoyant="true">
+				<dimensions radius="0.05" height="0.15"/>
+				<origin rpy="0.925025 1.57 0.0" xyz="-0.135511 -0.255895 0.204755"/>
+				<material name="Foam"/>
+				<mass value="0.08"/>
+				<look name="manipulator"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</internal_part> 
+			<internal_part name="flotar6" type="cylinder" physics="submerged" buoyant="true">
+				<dimensions radius="0.05" height="0.15"/>
+				<origin rpy="-0.925025 1.57 0.0" xyz="0.145937 -0.255895 0.204755"/>
+				<material name="Foam"/>
+				<mass value="0.08"/>
+				<look name="manipulator"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</internal_part> 
+			<internal_part name="flotar7" type="cylinder" physics="submerged" buoyant="true">
+				<dimensions radius="0.05" height="0.15"/>
+				<origin rpy="-0.925025 1.57 0.0" xyz="-0.135511 0.294901 0.204755"/>
+				<material name="Foam"/>
+				<mass value="0.08"/>
+				<look name="manipulator"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</internal_part> 
+			<internal_part name="flotar8" type="cylinder" physics="submerged" buoyant="true">
+				<dimensions radius="0.05" height="0.15"/>
+				<origin rpy="0.925025 1.57 0.0" xyz="0.145937 0.294901 0.204755"/>
+				<material name="Foam"/>
+				<mass value="0.08"/>
+				<look name="manipulator"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</internal_part> 
+			<internal_part name="flotar1" type="cylinder" physics="submerged" buoyant="true">
+				<dimensions radius="0.05" height="0.2"/>
+				<origin rpy="-1.57 0.0 1.08" xyz="-0.273786 -0.121939 0.204755"/>
+				<material name="Foam"/>
+				<mass value="0.08"/>
+				<look name="manipulator"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</internal_part> 
+			<internal_part name="flotar2" type="cylinder" physics="submerged" buoyant="true">
+				<dimensions radius="0.05" height="0.2"/>
+				<origin rpy="-1.57 0.0 -1.08" xyz="-0.273786 0.160872 0.204755"/>
+				<material name="Foam"/>
+				<mass value="0.08"/>
+				<look name="manipulator"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</internal_part> 
+			<internal_part name="flotar3" type="cylinder" physics="submerged" buoyant="true">
+				<dimensions radius="0.05" height="0.2"/>
+				<origin rpy="1.57 0.0 -1.08" xyz="0.287265 -0.121939 0.204755"/>
+				<material name="Foam"/>
+				<mass value="0.08"/>
+				<look name="manipulator"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</internal_part> 
+			<internal_part name="flotar4" type="cylinder" physics="submerged" buoyant="true">
+				<dimensions radius="0.05" height="0.2"/>
+				<origin rpy="1.57 0.0 1.08" xyz="0.287265 0.121939 0.204755"/>
+				<material name="Foam"/>
+				<mass value="0.08"/>
+				<look name="manipulator"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</internal_part> 
+			<internal_part name="flotar5" type="cylinder" physics="submerged" buoyant="true">
+				<dimensions radius="0.05" height="0.15"/>
+				<origin rpy="0.925025 1.57 0.0" xyz="-0.135511 -0.255895 0.204755"/>
+				<material name="Foam"/>
+				<mass value="0.08"/>
+				<look name="manipulator"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</internal_part> 
+			<internal_part name="flotar6" type="cylinder" physics="submerged" buoyant="true">
+				<dimensions radius="0.05" height="0.15"/>
+				<origin rpy="-0.925025 1.57 0.0" xyz="0.145937 -0.255895 0.204755"/>
+				<material name="Foam"/>
+				<mass value="0.08"/>
+				<look name="manipulator"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</internal_part> 
+			<internal_part name="flotar7" type="cylinder" physics="submerged" buoyant="true">
+				<dimensions radius="0.05" height="0.15"/>
+				<origin rpy="-0.925025 1.57 0.0" xyz="-0.135511 0.294901 0.204755"/>
+				<material name="Foam"/>
+				<mass value="0.08"/>
+				<look name="manipulator"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</internal_part> 
+			<internal_part name="flotar8" type="cylinder" physics="submerged" buoyant="true">
+				<dimensions radius="0.05" height="0.15"/>
+				<origin rpy="0.925025 1.57 0.0" xyz="0.145937 0.294901 0.204755"/>
+				<material name="Foam"/>
+				<mass value="0.08"/>
+				<look name="manipulator"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</internal_part> 
+		</base_link>
+
+		<actuator name="Thruster_up_left" type="thruster">
+			<origin rpy="0.0 1.5708 0.0" xyz="0.304457 0.02257 0.168299"/>
+			<specs max_setpoint="${3278.0/60.0*2.0*pi}" inverted_setpoint="true" normalized_setpoint="true"/>
+			<propeller diameter="0.07" right="true">
+				<mesh filename="cirtesub/Propeller.obj" scale="1.0"/>
+				<material name="Neutral"/>
+				<look name="propeller"/>
+			</propeller>
+			<link name="Vehicle"/>
+			<rotor_dynamics type="mechanical_pi">
+				<rotor_inertia value="0.05"/>
+				<kp value="0.8"/>
+				<ki value="0.2"/>
+				<ilimit value="2.0"/>
+			</rotor_dynamics>
+			<thrust_model type="fluid_dynamics">
+				<thrust_coeff forward="0.52" reverse="0.48"/>
+				<torque_coeff value="0.001"/>
+			</thrust_model>
+		</actuator>
+
+		<actuator name="Thruster_up_right" type="thruster">
+			<origin rpy="0.0 1.5708 0.0" xyz="-0.30517 0.022882 0.168299"/>
+			<specs max_setpoint="${3278.0/60.0*2.0*pi}" inverted_setpoint="true" normalized_setpoint="true"/>
+			<propeller diameter="0.07" right="true">
+				<mesh filename="cirtesub/Propeller.obj" scale="1.0"/>
+				<material name="Neutral"/>
+				<look name="propeller"/>
+			</propeller>
+			<link name="Vehicle"/>
+			<rotor_dynamics type="mechanical_pi">
+				<rotor_inertia value="0.05"/>
+				<kp value="0.8"/>
+				<ki value="0.2"/>
+				<ilimit value="2.0"/>
+			</rotor_dynamics>
+			<thrust_model type="fluid_dynamics">
+				<thrust_coeff forward="0.52" reverse="0.48"/>
+				<torque_coeff value="0.001"/>
+			</thrust_model>
+		</actuator>
+
+		<actuator name="Thruster_up_front" type="thruster">
+			<origin rpy="0.0 1.5708 0.0" xyz="-0.00033  0.294527 0.168299"/>
+			<specs max_setpoint="${3278.0/60.0*2.0*pi}" inverted_setpoint="true" normalized_setpoint="true"/>
+			<propeller diameter="0.07" right="true">
+				<mesh filename="cirtesub/Propeller.obj" scale="1.0"/>
+				<material name="Neutral"/>
+				<look name="propeller"/>
+			</propeller>
+			<link name="Vehicle"/>
+			<rotor_dynamics type="mechanical_pi">
+				<rotor_inertia value="0.05"/>
+				<kp value="0.8"/>
+				<ki value="0.2"/>
+				<ilimit value="2.0"/>
+			</rotor_dynamics>
+			<thrust_model type="fluid_dynamics">
+				<thrust_coeff forward="0.52" reverse="0.48"/>
+				<torque_coeff value="0.001"/>
+			</thrust_model>
+		</actuator>
+
+		<actuator name="Thruster_up_back" type="thruster">
+			<origin rpy="0.0 1.5708 0.0" xyz="-0.00033  -0.249237 0.168299"/>
+			<specs max_setpoint="${3278.0/60.0*2.0*pi}" inverted_setpoint="true" normalized_setpoint="true"/>
+			<propeller diameter="0.07" right="true">
+				<mesh filename="cirtesub/Propeller.obj" scale="1.0"/>
+				<material name="Neutral"/>
+				<look name="propeller"/>
+			</propeller>
+			<link name="Vehicle"/>
+			<rotor_dynamics type="mechanical_pi">
+				<rotor_inertia value="0.05"/>
+				<kp value="0.8"/>
+				<ki value="0.2"/>
+				<ilimit value="2.0"/>
+			</rotor_dynamics>
+			<thrust_model type="fluid_dynamics">
+				<thrust_coeff forward="0.52" reverse="0.48"/>
+				<torque_coeff value="0.001"/>
+			</thrust_model>
+		</actuator>
+
+		<actuator name="Thruster_down_frontleft" type="thruster">
+			<origin rpy="0.0 0.0 3.9262" xyz="0.208758 -0.164187 0.081187"/>
+			<specs max_setpoint="324.6312409" inverted_setpoint="true" normalized_setpoint="true"/>
+			<propeller diameter="0.1145" right="true">
+				<mesh filename="cirtesub/Propeller.obj" scale="1.0"/>
+				<material name="Neutral"/>
+				<look name="propeller"/>
+			</propeller>
+			<link name="Vehicle"/>
+			<rotor_dynamics type="mechanical_pi">
+				<rotor_inertia value="0.05"/>
+				<kp value="0.8"/>
+				<ki value="0.2"/>
+				<ilimit value="2.0"/>
+			</rotor_dynamics>
+			<thrust_model type="fluid_dynamics">
+				<thrust_coeff forward="0.605" reverse="0.395"/>
+				<torque_coeff value="0.001"/>
+			</thrust_model>
+		</actuator>
+
+		<actuator name="Thruster_down_frontright" type="thruster">
+			<origin rpy="0.0 0.0 2.3562" xyz="-0.211056 -0.164187 0.079618"/>
+			<specs max_setpoint="324.6312409" inverted_setpoint="true" normalized_setpoint="true"/>
+			<propeller diameter="0.1145" right="true">
+				<mesh filename="cirtesub/Propeller.obj" scale="1.0"/>
+				<material name="Neutral"/>
+				<look name="propeller"/>
+			</propeller>
+			<link name="Vehicle"/>
+			<rotor_dynamics type="mechanical_pi">
+				<rotor_inertia value="0.05"/>
+				<kp value="0.8"/>
+				<ki value="0.2"/>
+				<ilimit value="2.0"/>
+			</rotor_dynamics>
+			<thrust_model type="fluid_dynamics">
+				<thrust_coeff forward="0.605" reverse="0.395"/>
+				<torque_coeff value="0.001"/>
+			</thrust_model>
+		</actuator>
+
+		<actuator name="Thruster_down_backright" type="thruster">
+			<origin rpy="0.0 0.0 0.7854" xyz="-0.211056 0.203845 0.079618"/>
+			<specs max_setpoint="324.6312409" inverted_setpoint="true" normalized_setpoint="true"/>
+			<propeller diameter="0.1145" right="true">
+				<mesh filename="cirtesub/Propeller.obj" scale="1.0"/>
+				<material name="Neutral"/>
+				<look name="propeller"/>
+			</propeller>
+			<link name="Vehicle"/>
+			<rotor_dynamics type="mechanical_pi">
+				<rotor_inertia value="0.05"/>
+				<kp value="0.8"/>
+				<ki value="0.2"/>
+				<ilimit value="2.0"/>
+			</rotor_dynamics>
+			<thrust_model type="fluid_dynamics">
+				<thrust_coeff forward="0.605" reverse="0.395"/>
+				<torque_coeff value="0.001"/>
+			</thrust_model>
+		</actuator>
+		<actuator name="Thruster_down_backleft" type="thruster">
+			<origin rpy="0.0 0.0 5.4978" xyz="0.209105 0.208946 0.079618"/>
+			<specs max_setpoint="324.6312409" inverted_setpoint="true" normalized_setpoint="true"/>
+			<propeller diameter="0.1145" right="true">
+				<mesh filename="cirtesub/Propeller.obj" scale="1.0"/>
+				<material name="Neutral"/>
+				<look name="propeller"/>
+			</propeller>
+			<link name="Vehicle"/>
+			<rotor_dynamics type="mechanical_pi">
+				<rotor_inertia value="0.05"/>
+				<kp value="0.8"/>
+				<ki value="0.2"/>
+				<ilimit value="2.0"/>
+			</rotor_dynamics>
+			<thrust_model type="fluid_dynamics">
+				<thrust_coeff forward="0.605" reverse="0.395"/>
+				<torque_coeff value="0.001"/>
+			</thrust_model>
+		</actuator>
+
+		<!-- Links Alpha left-->
+        <link name="m3_inlineL" type="model" physics="submerged">
+			<physical>
+				<mesh filename="alpha/m3_inline.obj" scale="1.0"/>
+				<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</physical>
+			<visual>
+				<mesh filename="alpha/m3_inline.obj" scale="1.0"/>
+				<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</visual>
+			<material name="Neutral"/>
+			<look name="black"/>	
+		</link>
+
+        <link name="m2L" type="model" physics="submerged">
+			<physical>
+				<mesh filename="alpha/m2_v2.obj" scale="1.0"/>
+				<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</physical>
+			<visual>
+				<mesh filename="alpha/m2_v2.obj" scale="1.0"/>
+				<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</visual>
+			<material name="Neutral"/>
+			<mass value="0.3"/>
+			<look name="black"/>	
+		</link>
+
+        <link name="m2_1_1L" type="model" physics="submerged">
+			<physical>
+				<mesh filename="alpha/m2_1_1_v2.obj" scale="1.0"/>
+				<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</physical>
+			<visual>
+				<mesh filename="alpha/m2_1_1_v2.obj" scale="1.0"/>
+				<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</visual>
+			<material name="Neutral"/>
+			<look name="black"/>	
+		</link>
+		
+		
+        <link name="m2_1_3L" type="model" physics="submerged">
+			<physical>
+				<mesh filename="alpha/m2_1_3_fin.obj" scale="1.0"/>
+				<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</physical>
+			<visual>
+				<mesh filename="alpha/m2_1_3_fin.obj" scale="1.0"/>
+				<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</visual>
+			<material name="Neutral"/>
+			<look name="black"/>	
+		</link>  
+
+        <link name="rs1L" type="model" physics="submerged">
+			<physical>
+				<mesh filename="alpha/rs1_v2.obj" scale="1.0"/>
+				<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</physical>
+			<visual>
+				<mesh filename="alpha/rs1_v2.obj" scale="1.0"/>
+				<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</visual>
+			<material name="Neutral"/>
+			<look name="black"/>	
+			<mass value="0.1"/>
+		</link>
+
+		<!-- <link name="rs1L" type="model" physics="submerged">
+			<physical>
+				<mesh filename="alpha/rs1_124_compl.obj" scale="1.0"/>
+				<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</physical>
+			<visual>
+				<mesh filename="alpha/rs1_124_compl.obj" scale="1.0"/>
+				<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</visual>
+			<material name="Neutral"/>
+			<look name="black"/>	
+			<mass value="0.1"/>
+		</link> -->
+
+        <link name="rs1_124L" type="model" physics="submerged">
+			<physical>
+				<mesh filename="alpha/rs1_124_v2.obj" scale="1.0"/>
+				<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</physical>
+			<visual>
+				<mesh filename="alpha/rs1_124_v2.obj" scale="1.0"/>
+				<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</visual>
+			<material name="Polyamid"/>
+			<look name="gray"/>	
+			<mass value="0.0005"/>
+		</link>
+				
+
+        <link name="rs1_130L" type="model" physics="submerged">
+			<physical>
+				<mesh filename="alpha/rs1_130_fin_v3.obj" scale="1.0"/>
+				<origin rpy="0.0 0.0 0.0" xyz="0.0075 0.0 0.0"/>
+			</physical>
+			<material name="Polyamid"/>
+			<look name="gray"/>	
+			<mass value="0.0001"/>
+		</link>	
+		
+        <link name="rs1_139L" type="model" physics="submerged">
+			<physical>
+				<mesh filename="alpha/rs1_139_fin_v3.obj" scale="1.0"/>
+				<origin rpy="0.0 0.0 0.0" xyz="0.0075 0.0 0.0"/>
+			</physical>
+			<material name="Polyamid"/>
+			<look name="gray"/>	
+			<mass value="0.0001"/>
+		</link>	
+		
+		<joint name="VehicleToArmL" type="fixed">
+			<parent name="Vehicle"/>
+			<child name="m3_inlineL"/>
+			<origin rpy="1.57 0.0 -1.5708" xyz="0.085818 -0.210 0.043"/>
+		</joint>
+
+		<joint name="alpha_axis_eL" type="revolute">
+			<parent name="m3_inlineL"/>
+			<child name="m2_1_1L"/>
+			<origin rpy="3.14 0.0 3.14" xyz="0.120683 -0.021096 -0.025"/>
+			<axis xyz="0.0 0.0 1.0"/>
+			<limits min="0" max="6.1"/>
+		</joint>
+		
+		<joint name="alpha_axis_dL" type="revolute">
+			<parent name="m2_1_1L"/>
+			<child name="m2L"/>
+			<origin rpy="0.0 1.92 0.0" xyz="0.023 0.0 0.033"/>
+			<axis xyz="0.0 -1.0 0.0"/>
+			<limits min="0.0" max="3.49"/>
+		</joint>
+		
+
+		<joint name="alpha_axis_cL" type="revolute">
+			<parent name="m2L"/>
+			<child name="m2_1_3L"/>
+			<origin rpy="0.0 2.8 0.0" xyz="0.13 -0.015 0.08"/>
+			<axis xyz="0.0 1.0 0.0"/>
+			<limits min="0.0" max="3.22"/>
+		</joint>
+		
+		<joint name="alpha_axis_c_3.1L" type="fixed">
+			<parent name="m2_1_3L"/>
+			<child name="rs1L"/>
+			<origin rpy="0.0 0.0 0.0" xyz="0.031 0.0165 -0.0225"/>
+			<axis xyz="0.0 -1.0 0.0"/>
+		</joint>
+
+		<joint name="alpha_axis_bL" type="revolute">
+			<parent name="rs1L"/>
+			<child name="rs1_124L"/>
+			<origin rpy="0.0 0.0 0.0" xyz="0.1025 0.0 0.0"/>
+			<axis xyz="1.0 0.0 0.0"/>
+			<limits min="0.0" max="3.22"/>
+		</joint>
+		
+		 <joint name="alpha_axis_a1L" type="revolute">
+			<parent name="rs1_124L"/>
+			<child name="rs1_130L"/>
+			<origin rpy="3.14 0.0 0.0" xyz="0.0 0.0 -0.00"/>
+			<axis xyz="0.0 1.0 0.0"/>
+			<limits min="-0.5" max="0.5"/>
+		</joint>
+	
+		<joint name="alpha_axis_aL" type="revolute">
+			<parent name="rs1_124L"/>
+			<child name="rs1_139L"/>
+			<origin rpy="3.14 0.0 0.0" xyz="0.0 0.0 0.00"/>
+			<axis xyz="0.0 1.0 0.0"/>
+			<limits min="-0.5" max="0.125"/>
+		</joint>			
+
+					
+		<actuator name="Servo5L" type="servo">
+			<joint name="alpha_axis_aL"/>
+			<controller position_gain="0.1" velocity_gain="1.0" max_torque="100.0"/>
+			<initial position="0.125"/>
+		</actuator>
+
+		<actuator name="Servo4L" type="servo">
+			<joint name="alpha_axis_bL"/>
+			<controller position_gain="1.0" velocity_gain="1.0" max_torque="100.0"/>
+			<initial position="0.0"/>
+		</actuator>
+
+		<actuator name="Servo3L" type="servo">
+			<joint name="alpha_axis_cL"/>
+			<controller position_gain="1.0" velocity_gain="1.0" max_torque="1000.0"/>
+			<!-- <initial position="3.0"/> -->
+			<initial position="0.0"/>
+		</actuator>
+
+		<actuator name="Servo2L" type="servo">
+			<joint name="alpha_axis_dL"/>
+			<controller position_gain="1.0" velocity_gain="1.0" max_torque="1000.0"/>
+			<!-- <initial position="2.5"/> -->
+			<initial position="0.0"/>
+		</actuator>
+
+		<actuator name="Servo1L" type="servo">
+			<joint name="alpha_axis_eL"/>
+			<controller position_gain="1.0" velocity_gain="1.0" max_torque="1000.0"/>
+			<!-- <initial position="3.1416"/> -->
+			<initial position="0.0"/>
+		</actuator>
+
+		<!-- Links Alpha right-->
+        <link name="m3_inlineR" type="model" physics="submerged">
+			<physical>
+				<mesh filename="alpha/m3_inline2.obj" scale="1.0"/>
+				<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</physical>
+			<visual>
+				<mesh filename="alpha/m3_inline2.obj" scale="1.0"/>
+				<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</visual>
+			<material name="Neutral"/>
+			<look name="black"/>	
+		</link>
+
+        <link name="m2R" type="model" physics="submerged">
+			<physical>
+				<mesh filename="alpha/m2_v2.obj" scale="1.0"/>
+				<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</physical>
+			<visual>
+				<mesh filename="alpha/m2_v2.obj" scale="1.0"/>
+				<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</visual>
+			<material name="Neutral"/>
+			<mass value="0.3"/>
+			<look name="black"/>	
+		</link>
+
+       <link name="m2_1_1R" type="model" physics="submerged">
+			<physical>
+				<mesh filename="alpha/m2_1_1_v2.obj" scale="1.0"/>
+				<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</physical>
+			<visual>
+				<mesh filename="alpha/m2_1_1_v2.obj" scale="1.0"/>
+				<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</visual>
+			<material name="Neutral"/>
+			<look name="black"/>	
+		</link>
+		
+         <link name="m2_1_3R" type="model" physics="submerged">
+			<physical>
+				<mesh filename="alpha/m2_1_3_fin.obj" scale="1.0"/>
+				<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</physical>
+			<visual>
+				<mesh filename="alpha/m2_1_3_fin.obj" scale="1.0"/>
+				<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</visual>
+			<material name="Neutral"/>
+			<look name="black"/>	
+		</link>  
+
+        <link name="rs1R" type="model" physics="submerged">
+			<physical>
+				<mesh filename="alpha/rs1_v2.obj" scale="1.0"/>
+				<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</physical>
+			<visual>
+				<mesh filename="alpha/rs1_v2.obj" scale="1.0"/>
+				<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</visual>
+			<material name="Neutral"/>
+			<look name="black"/>	
+			<mass value="0.1"/>
+		</link>
+
+        <link name="rs1_124R" type="model" physics="submerged">
+			<physical>
+				<mesh filename="alpha/rs1_124_v2.obj" scale="1.0"/>
+				<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</physical>
+			<visual>
+				<mesh filename="alpha/rs1_124_v2.obj" scale="1.0"/>
+				<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</visual>
+			<material name="Polyamid"/>
+			<look name="gray"/>	
+			<mass value="0.5"/>
+		</link>
+				
+
+        <link name="rs1_130R" type="model" physics="submerged">
+			<physical>
+				<mesh filename="alpha/rs1_130_fin_v3.obj" scale="1.0"/>
+				<origin rpy="0.0 0.0 0.0" xyz="0.0075 0.0 0.0"/>
+			</physical>
+			<material name="Polyamid"/>
+			<look name="gray"/>	
+			<mass value="0.1"/>
+		</link>	
+		
+        <link name="rs1_139R" type="model" physics="submerged">
+			<physical>
+				<mesh filename="alpha/rs1_139_fin_v3.obj" scale="1.0"/>
+				<origin rpy="0.0 0.0 0.0" xyz="0.0075 0.0 0.0"/>
+			</physical>
+			<material name="Polyamid"/>
+			<look name="gray"/>	
+			<mass value="0.1"/>
+		</link>	
+		
+		<joint name="VehicleToArmR" type="fixed">
+			<parent name="Vehicle"/>
+			<child name="m3_inlineR"/>
+			<origin rpy="-1.57 0.0 -1.5708" xyz="-0.05 -0.210 -0.042158"/>
+			<!-- <origin rpy="-1.57 0.0 -1.5708" xyz="0.085818 -0.210 -0.042158"/> -->
+		</joint>
+
+		<joint name="alpha_axis_eR" type="revolute">
+			<parent name="m3_inlineR"/>
+			<child name="m2_1_1R"/>
+			<origin rpy="3.14 0.0 3.14" xyz="0.120683 -0.021096 -0.025"/>
+			<axis xyz="0.0 0.0 1.0"/>
+			<limits min="0" max="6.1"/>
+		</joint>
+		
+		<joint name="alpha_axis_dR" type="revolute">
+			<parent name="m2_1_1R"/>
+			<child name="m2R"/>
+			<origin rpy="0.0 1.92 0.0" xyz="0.023 0.0 0.033"/>
+			<axis xyz="0.0 -1.0 0.0"/>
+			<limits min="0.0" max="3.49"/>
+		</joint>
+		
+
+		<joint name="alpha_axis_cR" type="revolute">
+			<parent name="m2R"/>
+			<child name="m2_1_3R"/>
+			<origin rpy="0.0 2.8 0.0" xyz="0.13 -0.015 0.08"/>
+			<axis xyz="0.0 1.0 0.0"/>
+			<limits min="0.0" max="3.22"/>
+		</joint>
+		
+		<joint name="alpha_axis_c_3.1R" type="fixed">
+			<parent name="m2_1_3R"/>
+			<child name="rs1R"/>
+			<origin rpy="0.0 0.0 0.0" xyz="0.031 0.0165 -0.0225"/>
+			<axis xyz="0.0 -1.0 0.0"/>
+		</joint>
+
+		<joint name="alpha_axis_bR" type="revolute">
+			<parent name="rs1R"/>
+			<child name="rs1_124R"/>
+			<origin rpy="0.0 0.0 0.0" xyz="0.1025 0.0 0.0"/>
+			<axis xyz="1.0 0.0 0.0"/>
+			<limits min="0.0" max="3.22"/>
+		</joint>
+		
+		<joint name="alpha_axis_a1R" type="revolute">
+			<parent name="rs1_124R"/>
+			<child name="rs1_130R"/>
+			<origin rpy="3.14 0.0 0.0" xyz="0.0 0.0 -0.00"/>
+			<axis xyz="0.0 1.0 0.0"/>
+			<limits min="-0.5" max="0.5"/>
+		</joint>
+	
+		<joint name="alpha_axis_aR" type="revolute">
+			<parent name="rs1_124R"/>
+			<child name="rs1_139R"/>
+			<origin rpy="3.14 0.0 0.0" xyz="0.0 0.0 0.00"/>
+			<axis xyz="0.0 1.0 0.0"/>
+			<limits min="-0.5" max="0.125"/>
+		</joint>			
+			
+		<actuator name="Servo5R" type="servo">
+			<joint name="alpha_axis_aR"/>
+			<controller position_gain="0.1" velocity_gain="1.0" max_torque="100.0"/>
+			<initial position="0.125"/>
+		</actuator> 
+
+		<actuator name="Servo4R" type="servo">
+			<joint name="alpha_axis_bR"/>
+			<controller position_gain="1.0" velocity_gain="1.0" max_torque="100.0"/>
+			<initial position="0.0"/>
+		</actuator>
+
+		<actuator name="Servo3R" type="servo">
+			<joint name="alpha_axis_cR"/>
+			<controller position_gain="1.0" velocity_gain="1.0" max_torque="1000.0"/>
+			<initial position="0.0"/>
+		</actuator> 
+
+		<actuator name="Servo2R" type="servo">
+			<joint name="alpha_axis_dR"/>
+			<controller position_gain="1.0" velocity_gain="1.0" max_torque="1000.0"/>
+			<initial position="0.0"/>
+		</actuator>  
+
+		<actuator name="Servo1R" type="servo">
+			<joint name="alpha_axis_eR"/>
+			<controller position_gain="1.0" velocity_gain="1.0" max_torque="1000.0"/>
+			<initial position="0.0"/>
+		</actuator>
+
+		<sensor name="IMU" rate="10.0" type="imu">
+			<range angular_velocity="10.0 10.0 5.0" linear_acceleration="10.0"/>
+			<noise angle="0.1 0.1 0.5" angular_velocity="0.05" yaw_drift="0.001" linear_acceleration="0.1"/>
+			<history samples="1"/>
+			<origin xyz="0.1 0.0 0.0" rpy="0.0 0.0 0.0"/>
+			<link name="Vehicle"/>
+		</sensor>
+
+		<sensor name="Odometry" rate="30.0" type="odometry">
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+			<ros_publisher topic="/cirtesub/odometry"/>
+			<link name="Vehicle"/>
+		</sensor>
+
+        <world_transform xyz="1.0 1.0 1.0" rpy="0.0 3.14 0.0"/>
+
+        <!-- Publicación de TF dinámico del base_link -->
+		<ros_subscriber thrusters="/cirtesub/controller/thruster_setpoints_sim" forces="/cirtesub/controller/thruster_manager/input_stamped" servos="/cirtesub/alpha/desired_joint_states"/>
+		<ros_publisher thrusters="/cirtesub/controller/thruster_state" forces="/cirtesub/controller/thruster_manager/output" servos="/cirtesub/joint_states"/>
+        <ros_base_link_transforms publish="true"/>
+	</robot>
+</scenario>
