@@ -1,21 +1,19 @@
-import os
 from launch import LaunchDescription
 from launch.actions import GroupAction, IncludeLaunchDescription
-from launch.substitutions import PathJoinSubstitution, EnvironmentVariable, Command
+from launch.substitutions import PathJoinSubstitution, Command
 from launch_ros.actions import Node
 from launch_ros.substitutions import FindPackageShare
 
 def generate_launch_description():
 
     rviz_config_file = PathJoinSubstitution([
-        EnvironmentVariable("HOME"),
-        "entornos_stonefish", "src", "cirtesub_stonefish", "config", "cirtesub.rviz"
+        FindPackageShare("cirtesub_stonefish"),
+        "config", "cirtesub.rviz"
     ])
 
     urdf_file_fish = PathJoinSubstitution([
-        EnvironmentVariable("HOME"),
-        "entornos_stonefish", "src",
-        "cirtesub_stonefish", "urdf", "cirtesub_description", "cirtesub.urdf"
+        FindPackageShare("cirtesub_description"),
+        "urdf", "cirtesub.urdf"
     ])
 
     description_file_cirtesu = PathJoinSubstitution([

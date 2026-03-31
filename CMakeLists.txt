@@ -46,6 +46,10 @@ install(DIRECTORY resources
   DESTINATION share/${PROJECT_NAME}
 )
 
+install(DIRECTORY config
+  DESTINATION share/${PROJECT_NAME}
+)
+
 
 # Enable testing and install test files
 if(BUILD_TESTING)
@@ -54,4 +58,3 @@ if(BUILD_TESTING)
 endif()
 
 ament_package()
-
