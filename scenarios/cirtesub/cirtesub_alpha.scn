@@ -723,52 +723,10 @@
 			</internal_part> 
 		</base_link>
 
-		<actuator name="Thruster_up_left" type="thruster">
-			<origin rpy="0.0 1.5708 0.0" xyz="0.304457 0.02257 0.168299"/>
-			<specs max_setpoint="${3278.0/60.0*2.0*pi}" inverted_setpoint="true" normalized_setpoint="true"/>
-			<propeller diameter="0.07" right="true">
-				<mesh filename="cirtesub/Propeller.obj" scale="1.0"/>
-				<material name="Neutral"/>
-				<look name="propeller"/>
-			</propeller>
-			<link name="Vehicle"/>
-			<rotor_dynamics type="mechanical_pi">
-				<rotor_inertia value="0.05"/>
-				<kp value="0.8"/>
-				<ki value="0.2"/>
-				<ilimit value="2.0"/>
-			</rotor_dynamics>
-			<thrust_model type="fluid_dynamics">
-				<thrust_coeff forward="0.52" reverse="0.48"/>
-				<torque_coeff value="0.001"/>
-			</thrust_model>
-		</actuator>
-
-		<actuator name="Thruster_up_right" type="thruster">
-			<origin rpy="0.0 1.5708 0.0" xyz="-0.30517 0.022882 0.168299"/>
-			<specs max_setpoint="${3278.0/60.0*2.0*pi}" inverted_setpoint="true" normalized_setpoint="true"/>
-			<propeller diameter="0.07" right="true">
-				<mesh filename="cirtesub/Propeller.obj" scale="1.0"/>
-				<material name="Neutral"/>
-				<look name="propeller"/>
-			</propeller>
-			<link name="Vehicle"/>
-			<rotor_dynamics type="mechanical_pi">
-				<rotor_inertia value="0.05"/>
-				<kp value="0.8"/>
-				<ki value="0.2"/>
-				<ilimit value="2.0"/>
-			</rotor_dynamics>
-			<thrust_model type="fluid_dynamics">
-				<thrust_coeff forward="0.52" reverse="0.48"/>
-				<torque_coeff value="0.001"/>
-			</thrust_model>
-		</actuator>
-
 		<actuator name="Thruster_up_front" type="thruster">
 			<origin rpy="0.0 1.5708 0.0" xyz="-0.00033  0.294527 0.168299"/>
-			<specs max_setpoint="${3278.0/60.0*2.0*pi}" inverted_setpoint="true" normalized_setpoint="true"/>
-			<propeller diameter="0.07" right="true">
+			 <specs max_setpoint="${4000.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="true"/>
+			<propeller diameter="0.07" right="false">
 				<mesh filename="cirtesub/Propeller.obj" scale="1.0"/>
 				<material name="Neutral"/>
 				<look name="propeller"/>
@@ -781,15 +739,15 @@
 				<ilimit value="2.0"/>
 			</rotor_dynamics>
 			<thrust_model type="fluid_dynamics">
-				<thrust_coeff forward="0.52" reverse="0.48"/>
+				<thrust_coeff forward="1.0" reverse="1.0"/>
 				<torque_coeff value="0.001"/>
 			</thrust_model>
 		</actuator>
 
 		<actuator name="Thruster_up_back" type="thruster">
 			<origin rpy="0.0 1.5708 0.0" xyz="-0.00033  -0.249237 0.168299"/>
-			<specs max_setpoint="${3278.0/60.0*2.0*pi}" inverted_setpoint="true" normalized_setpoint="true"/>
-			<propeller diameter="0.07" right="true">
+			 <specs max_setpoint="${4000.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="true"/>
+			<propeller diameter="0.07" right="false">
 				<mesh filename="cirtesub/Propeller.obj" scale="1.0"/>
 				<material name="Neutral"/>
 				<look name="propeller"/>
@@ -802,14 +760,56 @@
 				<ilimit value="2.0"/>
 			</rotor_dynamics>
 			<thrust_model type="fluid_dynamics">
-				<thrust_coeff forward="0.52" reverse="0.48"/>
+				<thrust_coeff forward="1.0" reverse="1.0"/>
 				<torque_coeff value="0.001"/>
 			</thrust_model>
 		</actuator>
 
-		<actuator name="Thruster_down_frontleft" type="thruster">
-			<origin rpy="0.0 0.0 3.9262" xyz="0.208758 -0.164187 0.081187"/>
-			<specs max_setpoint="324.6312409" inverted_setpoint="true" normalized_setpoint="true"/>
+		<actuator name="Thruster_up_left" type="thruster">
+			<origin rpy="0.0 1.5708 0.0" xyz="0.304457 0.02257 0.168299"/>
+			 <specs max_setpoint="${4000.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="true"/>
+			<propeller diameter="0.07" right="false">
+				<mesh filename="cirtesub/Propeller.obj" scale="1.0"/>
+				<material name="Neutral"/>
+				<look name="propeller"/>
+			</propeller>
+			<link name="Vehicle"/>
+			<rotor_dynamics type="mechanical_pi">
+				<rotor_inertia value="0.05"/>
+				<kp value="0.8"/>
+				<ki value="0.2"/>
+				<ilimit value="2.0"/>
+			</rotor_dynamics>
+			<thrust_model type="fluid_dynamics">
+				<thrust_coeff forward="1.0" reverse="1.0"/>
+				<torque_coeff value="0.001"/>
+			</thrust_model>
+		</actuator>
+
+		<actuator name="Thruster_up_right" type="thruster">
+			<origin rpy="0.0 1.5708 0.0" xyz="-0.30517 0.022882 0.168299"/>
+			 <specs max_setpoint="${4000.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="true"/>
+			<propeller diameter="0.07" right="false">
+				<mesh filename="cirtesub/Propeller.obj" scale="1.0"/>
+				<material name="Neutral"/>
+				<look name="propeller"/>
+			</propeller>
+			<link name="Vehicle"/>
+			<rotor_dynamics type="mechanical_pi">
+				<rotor_inertia value="0.05"/>
+				<kp value="0.8"/>
+				<ki value="0.2"/>
+				<ilimit value="2.0"/>
+			</rotor_dynamics>
+			<thrust_model type="fluid_dynamics">
+				<thrust_coeff forward="1.0" reverse="1.0"/>
+				<torque_coeff value="0.001"/>
+			</thrust_model>
+		</actuator>
+
+		<actuator name="Thruster_down_backleft" type="thruster">
+			<origin rpy="0.0 0.0 5.4978" xyz="0.209105 0.208946 0.079618"/>
+			<specs max_setpoint="${4000.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="true"/>
 			<propeller diameter="0.1145" right="true">
 				<mesh filename="cirtesub/Propeller.obj" scale="1.0"/>
 				<material name="Neutral"/>
@@ -823,36 +823,15 @@
 				<ilimit value="2.0"/>
 			</rotor_dynamics>
 			<thrust_model type="fluid_dynamics">
-				<thrust_coeff forward="0.605" reverse="0.395"/>
-				<torque_coeff value="0.001"/>
-			</thrust_model>
-		</actuator>
-
-		<actuator name="Thruster_down_frontright" type="thruster">
-			<origin rpy="0.0 0.0 2.3562" xyz="-0.211056 -0.164187 0.079618"/>
-			<specs max_setpoint="324.6312409" inverted_setpoint="true" normalized_setpoint="true"/>
-			<propeller diameter="0.1145" right="true">
-				<mesh filename="cirtesub/Propeller.obj" scale="1.0"/>
-				<material name="Neutral"/>
-				<look name="propeller"/>
-			</propeller>
-			<link name="Vehicle"/>
-			<rotor_dynamics type="mechanical_pi">
-				<rotor_inertia value="0.05"/>
-				<kp value="0.8"/>
-				<ki value="0.2"/>
-				<ilimit value="2.0"/>
-			</rotor_dynamics>
-			<thrust_model type="fluid_dynamics">
-				<thrust_coeff forward="0.605" reverse="0.395"/>
+				<thrust_coeff forward="1.0" reverse="1.0"/>
 				<torque_coeff value="0.001"/>
 			</thrust_model>
 		</actuator>
 
 		<actuator name="Thruster_down_backright" type="thruster">
 			<origin rpy="0.0 0.0 0.7854" xyz="-0.211056 0.203845 0.079618"/>
-			<specs max_setpoint="324.6312409" inverted_setpoint="true" normalized_setpoint="true"/>
-			<propeller diameter="0.1145" right="true">
+			<specs max_setpoint="${4000.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="true"/>
+			<propeller diameter="0.1145" right="false">
 				<mesh filename="cirtesub/Propeller.obj" scale="1.0"/>
 				<material name="Neutral"/>
 				<look name="propeller"/>
@@ -865,13 +844,35 @@
 				<ilimit value="2.0"/>
 			</rotor_dynamics>
 			<thrust_model type="fluid_dynamics">
-				<thrust_coeff forward="0.605" reverse="0.395"/>
+				<thrust_coeff forward="1.0" reverse="1.0"/>
 				<torque_coeff value="0.001"/>
 			</thrust_model>
 		</actuator>
-		<actuator name="Thruster_down_backleft" type="thruster">
-			<origin rpy="0.0 0.0 5.4978" xyz="0.209105 0.208946 0.079618"/>
-			<specs max_setpoint="324.6312409" inverted_setpoint="true" normalized_setpoint="true"/>
+
+		<actuator name="Thruster_down_frontleft" type="thruster">
+			<origin rpy="0.0 0.0 3.9262" xyz="0.208758 -0.164187 0.081187"/>
+			 <specs max_setpoint="${4000.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="true"/>
+			<propeller diameter="0.1145" right="false">
+				<mesh filename="cirtesub/Propeller.obj" scale="1.0"/>
+				<material name="Neutral"/>
+				<look name="propeller"/>
+			</propeller>
+			<link name="Vehicle"/>
+			<rotor_dynamics type="mechanical_pi">
+				<rotor_inertia value="0.05"/>
+				<kp value="0.8"/>
+				<ki value="0.2"/>
+				<ilimit value="2.0"/>
+			</rotor_dynamics>
+			<thrust_model type="fluid_dynamics">
+				<thrust_coeff forward="1.0" reverse="1.0"/>
+				<torque_coeff value="0.001"/>
+			</thrust_model>
+		</actuator>
+
+		<actuator name="Thruster_down_frontright" type="thruster">
+			<origin rpy="0.0 0.0 2.3562" xyz="-0.211056 -0.164187 0.079618"/>
+			 <specs max_setpoint="${4000.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="true"/>
 			<propeller diameter="0.1145" right="true">
 				<mesh filename="cirtesub/Propeller.obj" scale="1.0"/>
 				<material name="Neutral"/>
@@ -885,7 +886,7 @@
 				<ilimit value="2.0"/>
 			</rotor_dynamics>
 			<thrust_model type="fluid_dynamics">
-				<thrust_coeff forward="0.605" reverse="0.395"/>
+				<thrust_coeff forward="1.0" reverse="1.0"/>
 				<torque_coeff value="0.001"/>
 			</thrust_model>
 		</actuator>

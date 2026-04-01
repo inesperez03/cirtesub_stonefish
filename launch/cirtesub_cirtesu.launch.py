@@ -11,14 +11,25 @@ def generate_launch_description():
         "config", "cirtesub.rviz"
     ])
 
-    urdf_file_fish = PathJoinSubstitution([
+    description_file_fish = PathJoinSubstitution([
         FindPackageShare("cirtesub_description"),
-        "urdf", "cirtesub.urdf"
+        "urdf", "cirtesub.urdf.xacro"
+    ])
+
+    lookup_csv_file = PathJoinSubstitution([
+        FindPackageShare("thrusters_hardware_interface"),
+        "config", "t500_lookup.csv"
     ])
 
     description_file_cirtesu = PathJoinSubstitution([
         FindPackageShare("cirtesub_stonefish"),
         "urdf", "cirtesu", "cirtesu.urdf.xacro"
+    ])
+
+    robot_description_cirtesub = Command([
+        "xacro", " ",
+        description_file_fish, " ",
+        "lookup_csv:=", lookup_csv_file
     ])
 
     robot_description_cirtesu = Command([
@@ -106,7 +117,7 @@ def generate_launch_description():
         name="robot_state_publisher_cirtesub",
         output="screen",
         parameters=[{
-            "robot_description": Command(["cat ", urdf_file_fish])
+            "robot_description": robot_description_cirtesub
         }],
         remappings=[
             ("/robot_description", "/cirtesub/robot_description")
