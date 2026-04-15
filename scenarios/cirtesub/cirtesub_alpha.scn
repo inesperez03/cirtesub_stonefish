@@ -1309,7 +1309,7 @@
 			<link name="Vehicle"/>
 		</sensor>
 
-		<sensor name="Odometry" rate="30.0" type="odometry">
+		<sensor name="Odometry" rate="50.0" type="odometry">
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 			<ros_publisher topic="/cirtesub/odometry"/>
 			<link name="Vehicle"/>
@@ -1320,6 +1320,6 @@
         <!-- Publicación de TF dinámico del base_link -->
 		<ros_subscriber thrusters="/cirtesub/controller/thruster_setpoints_sim" forces="/cirtesub/controller/thruster_manager/input_stamped" servos="/cirtesub/alpha/desired_joint_states"/>
 		<ros_publisher thrusters="/cirtesub/controller/thruster_state" forces="/cirtesub/controller/thruster_manager/output" servos="/cirtesub/joint_states"/>
-        <ros_base_link_transforms publish="true"/>
+        <ros_base_link_transforms publish="false"/>
 	</robot>
 </scenario>
