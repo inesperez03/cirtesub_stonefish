@@ -13,7 +13,7 @@ def generate_launch_description():
 
     description_file_fish = PathJoinSubstitution([
         FindPackageShare("cirtesub_description"),
-        "urdf", "cirtesub.urdf.xacro"
+        "urdf", "cirtesub_dual_alpha.urdf.xacro"
     ])
 
     lookup_csv_file = PathJoinSubstitution([
@@ -29,7 +29,8 @@ def generate_launch_description():
     robot_description_cirtesub = Command([
         "xacro", " ",
         description_file_fish, " ",
-        "lookup_csv:=", lookup_csv_file
+        "lookup_csv:=", lookup_csv_file, " ",
+        "use_sim:=true"
     ])
 
     robot_description_cirtesu = Command([

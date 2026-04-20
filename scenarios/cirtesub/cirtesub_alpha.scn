@@ -1012,10 +1012,10 @@
 		<joint name="VehicleToArmL" type="fixed">
 			<parent name="Vehicle"/>
 			<child name="m3_inlineL"/>
-			<origin rpy="1.57 0.0 -1.5708" xyz="0.085818 -0.210 0.043"/>
+			<origin rpy="-1.57 0.0 -1.5708" xyz="0.165 -0.215 0.0"/>
 		</joint>
 
-		<joint name="alpha_axis_eL" type="revolute">
+		<joint name="alpha_left/axis_e" type="revolute">
 			<parent name="m3_inlineL"/>
 			<child name="m2_1_1L"/>
 			<origin rpy="3.14 0.0 3.14" xyz="0.120683 -0.021096 -0.025"/>
@@ -1023,7 +1023,7 @@
 			<limits min="0" max="6.1"/>
 		</joint>
 		
-		<joint name="alpha_axis_dL" type="revolute">
+		<joint name="alpha_left/axis_d" type="revolute">
 			<parent name="m2_1_1L"/>
 			<child name="m2L"/>
 			<origin rpy="0.0 1.92 0.0" xyz="0.023 0.0 0.033"/>
@@ -1032,7 +1032,7 @@
 		</joint>
 		
 
-		<joint name="alpha_axis_cL" type="revolute">
+		<joint name="alpha_left/axis_c" type="revolute">
 			<parent name="m2L"/>
 			<child name="m2_1_3L"/>
 			<origin rpy="0.0 2.8 0.0" xyz="0.13 -0.015 0.08"/>
@@ -1047,7 +1047,7 @@
 			<axis xyz="0.0 -1.0 0.0"/>
 		</joint>
 
-		<joint name="alpha_axis_bL" type="revolute">
+		<joint name="alpha_left/axis_b" type="revolute">
 			<parent name="rs1L"/>
 			<child name="rs1_124L"/>
 			<origin rpy="0.0 0.0 0.0" xyz="0.1025 0.0 0.0"/>
@@ -1063,7 +1063,7 @@
 			<limits min="-0.5" max="0.5"/>
 		</joint>
 	
-		<joint name="alpha_axis_aL" type="revolute">
+		<joint name="alpha_left/axis_a" type="revolute">
 			<parent name="rs1_124L"/>
 			<child name="rs1_139L"/>
 			<origin rpy="3.14 0.0 0.0" xyz="0.0 0.0 0.00"/>
@@ -1073,33 +1073,33 @@
 
 					
 		<actuator name="Servo5L" type="servo">
-			<joint name="alpha_axis_aL"/>
+			<joint name="alpha_left/axis_a"/>
 			<controller position_gain="0.1" velocity_gain="1.0" max_torque="100.0"/>
 			<initial position="0.125"/>
 		</actuator>
 
 		<actuator name="Servo4L" type="servo">
-			<joint name="alpha_axis_bL"/>
+			<joint name="alpha_left/axis_b"/>
 			<controller position_gain="1.0" velocity_gain="1.0" max_torque="100.0"/>
 			<initial position="0.0"/>
 		</actuator>
 
 		<actuator name="Servo3L" type="servo">
-			<joint name="alpha_axis_cL"/>
+			<joint name="alpha_left/axis_c"/>
 			<controller position_gain="1.0" velocity_gain="1.0" max_torque="1000.0"/>
 			<!-- <initial position="3.0"/> -->
 			<initial position="0.0"/>
 		</actuator>
 
 		<actuator name="Servo2L" type="servo">
-			<joint name="alpha_axis_dL"/>
+			<joint name="alpha_left/axis_d"/>
 			<controller position_gain="1.0" velocity_gain="1.0" max_torque="1000.0"/>
 			<!-- <initial position="2.5"/> -->
 			<initial position="0.0"/>
 		</actuator>
 
 		<actuator name="Servo1L" type="servo">
-			<joint name="alpha_axis_eL"/>
+			<joint name="alpha_left/axis_e"/>
 			<controller position_gain="1.0" velocity_gain="1.0" max_torque="1000.0"/>
 			<!-- <initial position="3.1416"/> -->
 			<initial position="0.0"/>
@@ -1211,11 +1211,11 @@
 		<joint name="VehicleToArmR" type="fixed">
 			<parent name="Vehicle"/>
 			<child name="m3_inlineR"/>
-			<origin rpy="-1.57 0.0 -1.5708" xyz="-0.05 -0.210 -0.042158"/>
+			<origin rpy="1.57 0.0 -1.5708" xyz="-0.165 -0.210 0.043"/>
 			<!-- <origin rpy="-1.57 0.0 -1.5708" xyz="0.085818 -0.210 -0.042158"/> -->
 		</joint>
 
-		<joint name="alpha_axis_eR" type="revolute">
+		<joint name="alpha_right/axis_e" type="revolute">
 			<parent name="m3_inlineR"/>
 			<child name="m2_1_1R"/>
 			<origin rpy="3.14 0.0 3.14" xyz="0.120683 -0.021096 -0.025"/>
@@ -1223,7 +1223,7 @@
 			<limits min="0" max="6.1"/>
 		</joint>
 		
-		<joint name="alpha_axis_dR" type="revolute">
+		<joint name="alpha_right/axis_d" type="revolute">
 			<parent name="m2_1_1R"/>
 			<child name="m2R"/>
 			<origin rpy="0.0 1.92 0.0" xyz="0.023 0.0 0.033"/>
@@ -1232,7 +1232,7 @@
 		</joint>
 		
 
-		<joint name="alpha_axis_cR" type="revolute">
+		<joint name="alpha_right/axis_c" type="revolute">
 			<parent name="m2R"/>
 			<child name="m2_1_3R"/>
 			<origin rpy="0.0 2.8 0.0" xyz="0.13 -0.015 0.08"/>
@@ -1247,7 +1247,7 @@
 			<axis xyz="0.0 -1.0 0.0"/>
 		</joint>
 
-		<joint name="alpha_axis_bR" type="revolute">
+		<joint name="alpha_right/axis_b" type="revolute">
 			<parent name="rs1R"/>
 			<child name="rs1_124R"/>
 			<origin rpy="0.0 0.0 0.0" xyz="0.1025 0.0 0.0"/>
@@ -1263,7 +1263,7 @@
 			<limits min="-0.5" max="0.5"/>
 		</joint>
 	
-		<joint name="alpha_axis_aR" type="revolute">
+		<joint name="alpha_right/axis_a" type="revolute">
 			<parent name="rs1_124R"/>
 			<child name="rs1_139R"/>
 			<origin rpy="3.14 0.0 0.0" xyz="0.0 0.0 0.00"/>
@@ -1272,31 +1272,31 @@
 		</joint>			
 			
 		<actuator name="Servo5R" type="servo">
-			<joint name="alpha_axis_aR"/>
+			<joint name="alpha_right/axis_a"/>
 			<controller position_gain="0.1" velocity_gain="1.0" max_torque="100.0"/>
 			<initial position="0.125"/>
 		</actuator> 
 
 		<actuator name="Servo4R" type="servo">
-			<joint name="alpha_axis_bR"/>
+			<joint name="alpha_right/axis_b"/>
 			<controller position_gain="1.0" velocity_gain="1.0" max_torque="100.0"/>
 			<initial position="0.0"/>
 		</actuator>
 
 		<actuator name="Servo3R" type="servo">
-			<joint name="alpha_axis_cR"/>
+			<joint name="alpha_right/axis_c"/>
 			<controller position_gain="1.0" velocity_gain="1.0" max_torque="1000.0"/>
 			<initial position="0.0"/>
 		</actuator> 
 
 		<actuator name="Servo2R" type="servo">
-			<joint name="alpha_axis_dR"/>
+			<joint name="alpha_right/axis_d"/>
 			<controller position_gain="1.0" velocity_gain="1.0" max_torque="1000.0"/>
 			<initial position="0.0"/>
 		</actuator>  
 
 		<actuator name="Servo1R" type="servo">
-			<joint name="alpha_axis_eR"/>
+			<joint name="alpha_right/axis_e"/>
 			<controller position_gain="1.0" velocity_gain="1.0" max_torque="1000.0"/>
 			<initial position="0.0"/>
 		</actuator>
@@ -1319,7 +1319,7 @@
 
         <!-- Publicación de TF dinámico del base_link -->
 		<ros_subscriber thrusters="/cirtesub/controller/thruster_setpoints_sim" forces="/cirtesub/controller/thruster_manager/input_stamped" servos="/cirtesub/alpha/desired_joint_states"/>
-		<ros_publisher thrusters="/cirtesub/controller/thruster_state" forces="/cirtesub/controller/thruster_manager/output" servos="/cirtesub/joint_states"/>
+		<ros_publisher thrusters="/cirtesub/controller/thruster_state" forces="/cirtesub/controller/thruster_manager/output" servos="/cirtesub/alpha/joint_states"/>
         <ros_base_link_transforms publish="false"/>
 	</robot>
 </scenario>

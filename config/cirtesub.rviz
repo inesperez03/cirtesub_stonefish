@@ -8,7 +8,7 @@ Panels:
         - /Status1
         - /TF1/Frames1
         - /RobotModel1
-        - /RobotModel1/Status1
+        - /Pose1
       Splitter Ratio: 0.6351648569107056
     Tree Height: 549
   - Class: rviz_common/Selection
@@ -51,32 +51,19 @@ Visualization Manager:
       Reference Frame: <Fixed Frame>
       Value: true
     - Class: rviz_default_plugins/TF
-      Enabled: true
+      Enabled: false
       Frame Timeout: 15
       Frames:
         All Enabled: false
-        cirtesu_tank:
-          Value: false
-        cirtesub/base_link:
-          Value: true
-        world:
-          Value: true
-        world_ned:
-          Value: true
       Marker Scale: 1
       Name: TF
       Show Arrows: true
       Show Axes: true
       Show Names: false
       Tree:
-        world:
-          world_ned:
-            cirtesu_tank:
-              {}
-            cirtesub/base_link:
-              {}
+        {}
       Update Interval: 0
-      Value: true
+      Value: false
     - Alpha: 1
       Class: rviz_default_plugins/RobotModel
       Collision Enabled: false
@@ -126,6 +113,156 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
+        cirtesub/Thruster_down_backleft:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        cirtesub/Thruster_down_backright:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        cirtesub/Thruster_down_frontleft:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        cirtesub/Thruster_down_frontright:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        cirtesub/Thruster_up_back:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        cirtesub/Thruster_up_front:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        cirtesub/Thruster_up_left:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        cirtesub/Thruster_up_right:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        cirtesub/alpha_left/base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        cirtesub/alpha_left/ee_base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        cirtesub/alpha_left/m1_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        cirtesub/alpha_left/m2_1_1_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        cirtesub/alpha_left/m2_1_2_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        cirtesub/alpha_left/m2_joint_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        cirtesub/alpha_left/m3_inline_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        cirtesub/alpha_left/push_rod:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        cirtesub/alpha_left/standard_jaws_base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        cirtesub/alpha_left/standard_jaws_rs1_130_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        cirtesub/alpha_left/standard_jaws_rs1_139_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        cirtesub/alpha_left/standard_jaws_tool:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        cirtesub/alpha_right/base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        cirtesub/alpha_right/ee_base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        cirtesub/alpha_right/m1_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        cirtesub/alpha_right/m2_1_1_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        cirtesub/alpha_right/m2_1_2_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        cirtesub/alpha_right/m2_joint_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        cirtesub/alpha_right/m3_inline_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        cirtesub/alpha_right/push_rod:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        cirtesub/alpha_right/standard_jaws_base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        cirtesub/alpha_right/standard_jaws_rs1_130_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        cirtesub/alpha_right/standard_jaws_rs1_139_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        cirtesub/alpha_right/standard_jaws_tool:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
         cirtesub/base_link:
           Alpha: 1
           Show Axes: false
@@ -139,6 +276,26 @@ Visualization Manager:
       Update Interval: 0
       Value: true
       Visual Enabled: true
+    - Alpha: 1
+      Axes Length: 0.5
+      Axes Radius: 0.05000000074505806
+      Class: rviz_default_plugins/Pose
+      Color: 255; 25; 0
+      Enabled: true
+      Head Length: 0.30000001192092896
+      Head Radius: 0.10000000149011612
+      Name: Pose
+      Shaft Length: 1
+      Shaft Radius: 0.05000000074505806
+      Shape: Axes
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /position_hold_controller/setpoint
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -185,25 +342,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 1.1965683698654175
+      Distance: 2.3253839015960693
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 1.1611824035644531
-        Y: 0.15215227007865906
-        Z: -0.8452469110488892
+        X: 1.1036473512649536
+        Y: -0.43213534355163574
+        Z: 4.222139835357666
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: true
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 1.0003979206085205
+      Pitch: 0.17039822041988373
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 0.8703948259353638
+      Yaw: 1.290393352508545
     Saved: ~
 Window Geometry:
   Displays:
@@ -221,5 +378,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 1362
-  X: 378
-  Y: 77
+  X: 116
+  Y: 92
