@@ -1102,7 +1102,7 @@
 			<joint name="alpha_left/axis_e"/>
 			<controller position_gain="1.0" velocity_gain="1.0" max_torque="1000.0"/>
 			<!-- <initial position="3.1416"/> -->
-			<initial position="0.0"/>
+			<initial position="3.0"/>
 		</actuator>
 
 		<!-- Links Alpha right-->
@@ -1298,7 +1298,7 @@
 		<actuator name="Servo1R" type="servo">
 			<joint name="alpha_right/axis_e"/>
 			<controller position_gain="1.0" velocity_gain="1.0" max_torque="1000.0"/>
-			<initial position="0.0"/>
+			<initial position="3.0"/>
 		</actuator>
 
 		<sensor name="IMU" rate="10.0" type="imu">
