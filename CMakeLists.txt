@@ -23,8 +23,10 @@ set(PYTHON_EXECUTABLE /usr/bin/python3)  # Asegúrate de que esta ruta sea corre
 install(
   PROGRAMS
     scripts/odom2tf.py
-    scripts/bluerov2_logitechF310teleop.py
-    scripts/ardusim_patch.py
+    scripts/battery_status_simulated.py
+    scripts/leak_sensors_simulated.py
+    scripts/pressure_to_pose.py
+    scripts/dvl_to_twist.py
     DESTINATION lib/${PROJECT_NAME}
 )
 

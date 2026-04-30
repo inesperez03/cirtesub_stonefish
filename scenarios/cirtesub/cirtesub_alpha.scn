@@ -1301,11 +1301,40 @@
 			<initial position="3.0"/>
 		</actuator>
 
-		<sensor name="IMU" rate="10.0" type="imu">
+		<sensor name="IMU" rate="50.0" type="imu">
 			<range angular_velocity="10.0 10.0 5.0" linear_acceleration="10.0"/>
-			<noise angle="0.1 0.1 0.5" angular_velocity="0.05" yaw_drift="0.001" linear_acceleration="0.1"/>
+			<noise angle="0.02 0.02 0.05" angular_velocity="0.01" yaw_drift="0.0005" linear_acceleration="0.02"/>
 			<history samples="1"/>
-			<origin xyz="0.1 0.0 0.0" rpy="0.0 0.0 0.0"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 3.1416 1.57"/>
+			<ros_publisher topic="/cirtesub/sensors/imu"/>
+			<link name="Vehicle"/>
+		</sensor>
+
+		<sensor name="Pressure" rate="50.0" type="pressure">
+			<range pressure="10000.0"/>
+			<noise pressure="0.1"/>
+			<history samples="1"/>
+			<origin xyz="0.0 0.0 0.25" rpy="0.0 0.0 0.0"/>
+			<ros_publisher topic="/cirtesub/sensors/pressure"/>
+			<link name="Vehicle"/>
+		</sensor>
+
+		<sensor name="GPS" rate="1.0" type="gps">
+			<noise ned_position="0.1"/>
+			<history samples="1"/>
+			<origin xyz="0.0 0.0 0.50" rpy="0.0 0.0 0.0"/>
+			<ros_publisher topic="/cirtesub/sensors/gps"/>
+			<link name="Vehicle"/>
+		</sensor>
+
+		<sensor name="DVL" rate="10.0" type="dvl">
+			<specs beam_angle="22.5" beam_positive_z="true"/>
+			<range velocity="3.75 3.75 3.75" altitude_min="0.05" altitude_max="50.0"/>
+			<water_layer minimum_layer_size="10.0" boundary_near="10.0" boundary_far="30.0"/>
+			<noise velocity_percent="0.3" velocity="0.0001" altitude="0.001" water_velocity_percent="0.1" water_velocity="0.1"/>
+			<history samples="1"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 3.1416 1.57"/>
+			<ros_publisher topic="/cirtesub/sensors/dvl" altitude_topic="/cirtesub/sensors/dvl/altitude"/>
 			<link name="Vehicle"/>
 		</sensor>
 

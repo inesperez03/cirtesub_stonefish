@@ -11,6 +11,16 @@ def generate_launch_description():
         "config", "cirtesub.rviz"
     ])
 
+    battery_status_config = PathJoinSubstitution([
+        FindPackageShare("cirtesub_stonefish"),
+        "config", "battery_status_simulated.yaml"
+    ])
+
+    leak_sensors_config = PathJoinSubstitution([
+        FindPackageShare("cirtesub_stonefish"),
+        "config", "leak_sensors_simulated.yaml"
+    ])
+
     description_file_fish = PathJoinSubstitution([
         FindPackageShare("cirtesub_description"),
         "urdf", "cirtesub_dual_alpha.urdf.xacro"
@@ -121,7 +131,8 @@ def generate_launch_description():
             "robot_description": robot_description_cirtesub
         }],
         remappings=[
-            ("/robot_description", "/cirtesub/robot_description")
+            ("/robot_description", "/cirtesub/robot_description"),
+            ("/joint_states", "/cirtesub/joint_states")
         ],
     )
 
@@ -144,12 +155,30 @@ def generate_launch_description():
         arguments=["-d", rviz_config_file],
     )
 
+    battery_status_simulated_node = Node(
+        package="cirtesub_stonefish",
+        executable="battery_status_simulated.py",
+        name="battery_status_simulated",
+        output="screen",
+        parameters=[battery_status_config],
+    )
+
+    leak_sensors_simulated_node = Node(
+        package="cirtesub_stonefish",
+        executable="leak_sensors_simulated.py",
+        name="leak_sensors_simulated",
+        output="screen",
+        parameters=[leak_sensors_config],
+    )
+
     return LaunchDescription([
         namespace_action,
         rsp_node_cirtesub,
         rsp_node_cirtesu,
         rviz_node,
         odom_tf_node,
+        battery_status_simulated_node,
+        leak_sensors_simulated_node,
         static_transform_publisher_node,
         cirtesu_static_tf
     ])
