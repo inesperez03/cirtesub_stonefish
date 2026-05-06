@@ -4,9 +4,8 @@ Panels:
     Name: Displays
     Property Tree Widget:
       Expanded:
-        - /Global Options1
-        - /Status1
-        - /RobotModel1
+        - /TF1/Frames1
+        - /MarkerArray1/Namespaces1
       Splitter Ratio: 0.48571428656578064
     Tree Height: 549
   - Class: rviz_common/Selection
@@ -55,6 +54,14 @@ Visualization Manager:
         All Enabled: false
         cirtesu_tank:
           Value: false
+        cirtesub/DVL:
+          Value: true
+        cirtesub/GPS:
+          Value: true
+        cirtesub/IMU:
+          Value: true
+        cirtesub/Pressure:
+          Value: true
         cirtesub/Thruster_down_backleft:
           Value: false
         cirtesub/Thruster_down_backright:
@@ -121,10 +128,16 @@ Visualization Manager:
           Value: true
         cirtesub/base_link:
           Value: true
+        cirtesub/down_camera/camera:
+          Value: true
+        cirtesub/front_camera/camera:
+          Value: true
         world:
           Value: false
-        world_ned:
+        world_enu:
           Value: true
+        world_ned:
+          Value: false
       Marker Scale: 1
       Name: TF
       Show Arrows: true
@@ -136,6 +149,14 @@ Visualization Manager:
             cirtesu_tank:
               {}
             cirtesub/base_link:
+              cirtesub/DVL:
+                {}
+              cirtesub/GPS:
+                {}
+              cirtesub/IMU:
+                {}
+              cirtesub/Pressure:
+                {}
               cirtesub/Thruster_down_backleft:
                 {}
               cirtesub/Thruster_down_backright:
@@ -184,39 +205,14 @@ Visualization Manager:
                                 {}
                               cirtesub/alpha_right/standard_jaws_tool:
                                 {}
+              cirtesub/down_camera/camera:
+                {}
+              cirtesub/front_camera/camera:
+                {}
+            world_enu:
+              {}
       Update Interval: 0
       Value: true
-    - Alpha: 1
-      Class: rviz_default_plugins/RobotModel
-      Collision Enabled: false
-      Description File: ""
-      Description Source: Topic
-      Description Topic:
-        Depth: 5
-        Durability Policy: Volatile
-        History Policy: Keep Last
-        Reliability Policy: Reliable
-        Value: /cirtesu/robot_description
-      Enabled: true
-      Links:
-        All Links Enabled: true
-        Expand Joint Details: false
-        Expand Link Details: false
-        Expand Tree: false
-        Link Tree Style: Links in Alphabetic Order
-        cirtesu_tank:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-      Mass Properties:
-        Inertia: false
-        Mass: false
-      Name: cirtesu_tank
-      TF Prefix: ""
-      Update Interval: 0
-      Value: true
-      Visual Enabled: true
     - Alpha: 1
       Class: rviz_default_plugins/RobotModel
       Collision Enabled: false
@@ -235,6 +231,22 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
+        cirtesub/DVL:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        cirtesub/GPS:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        cirtesub/IMU:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        cirtesub/Pressure:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
         cirtesub/Thruster_down_backleft:
           Alpha: 1
           Show Axes: false
@@ -390,6 +402,14 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        cirtesub/down_camera/camera:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        cirtesub/front_camera/camera:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
       Mass Properties:
         Inertia: false
         Mass: false
@@ -416,7 +436,7 @@ Visualization Manager:
         Filter size: 10
         History Policy: Keep Last
         Reliability Policy: Reliable
-        Value: /task_priority_controller/tasks/base_pose/target
+        Value: /cirtesub/controller/position_hold/setpoint
       Value: true
     - Alpha: 1
       Axes Length: 0.5
@@ -457,6 +477,93 @@ Visualization Manager:
         History Policy: Keep Last
         Reliability Policy: Reliable
         Value: /task_priority_controller/tasks/base_pose/target
+      Value: true
+    - Angle Tolerance: 0.10000000149011612
+      Class: rviz_default_plugins/Odometry
+      Covariance:
+        Orientation:
+          Alpha: 0.5
+          Color: 255; 255; 127
+          Color Style: Unique
+          Frame: Local
+          Offset: 1
+          Scale: 1
+          Value: true
+        Position:
+          Alpha: 0.30000001192092896
+          Color: 204; 51; 204
+          Scale: 1
+          Value: true
+        Value: true
+      Enabled: false
+      Keep: 1
+      Name: Odometry
+      Position Tolerance: 0.10000000149011612
+      Shape:
+        Alpha: 1
+        Axes Length: 1
+        Axes Radius: 0.10000000149011612
+        Color: 255; 25; 0
+        Head Length: 0.30000001192092896
+        Head Radius: 0.10000000149011612
+        Shaft Length: 1
+        Shaft Radius: 0.05000000074505806
+        Value: Axes
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /cirtesub/localization/odometry
+      Value: false
+    - Class: rviz_default_plugins/MarkerArray
+      Enabled: true
+      Name: MarkerArray
+      Namespaces:
+        aruco_map: true
+        cirtesu_mesh: true
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /cirtesub/aruco/markers
+      Value: true
+    - Alpha: 1
+      Axes Length: 1
+      Axes Radius: 0.10000000149011612
+      Class: rviz_default_plugins/PoseWithCovariance
+      Color: 255; 25; 0
+      Covariance:
+        Orientation:
+          Alpha: 0.5
+          Color: 255; 255; 127
+          Color Style: Unique
+          Frame: Local
+          Offset: 1
+          Scale: 1
+          Value: true
+        Position:
+          Alpha: 0.30000001192092896
+          Color: 204; 51; 204
+          Scale: 1
+          Value: true
+        Value: true
+      Enabled: true
+      Head Length: 0.30000001192092896
+      Head Radius: 0.10000000149011612
+      Name: PoseWithCovariance
+      Shaft Length: 1
+      Shaft Radius: 0.05000000074505806
+      Shape: Axes
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /cirtesub/sensors/aruco/pose_enu
       Value: true
   Enabled: true
   Global Options:
@@ -504,25 +611,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 5.43618631362915
+      Distance: 22.346981048583984
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 2.0634970664978027
-        Y: 0.607165515422821
-        Z: 2.113985538482666
+        X: 5.260617256164551
+        Y: 0.8194555640220642
+        Z: 8.188302993774414
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: true
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.25039952993392944
+      Pitch: 0.7347971200942993
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 5.388548374176025
+      Yaw: 3.034372329711914
     Saved: ~
 Window Geometry:
   Displays:
@@ -540,5 +647,5 @@ Window Geometry:
   Views:
     collapsed: true
   Width: 1362
-  X: 116
-  Y: 92
+  X: 445
+  Y: 108

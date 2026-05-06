@@ -711,7 +711,7 @@
             <range pressure="10000.0"/>
             <noise pressure="0.1"/>
             <history samples="1"/>
-            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <origin xyz="0.0 0.0 -0.0" rpy="0.0 0.0 0.0"/>
             <link name="Vehicle"/>
 			<ros_publisher topic="/bluerov/pressure"/>
         </sensor>

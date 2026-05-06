@@ -31,21 +31,11 @@ def generate_launch_description():
         "config", "t500_lookup.csv"
     ])
 
-    description_file_cirtesu = PathJoinSubstitution([
-        FindPackageShare("cirtesub_stonefish"),
-        "urdf", "cirtesu", "cirtesu.urdf.xacro"
-    ])
-
     robot_description_cirtesub = Command([
         "xacro", " ",
         description_file_fish, " ",
         "lookup_csv:=", lookup_csv_file, " ",
         "use_sim:=true"
-    ])
-
-    robot_description_cirtesu = Command([
-        "xacro", " ",
-        description_file_cirtesu
     ])
     
     namespace_action = GroupAction(
@@ -106,20 +96,11 @@ def generate_launch_description():
         output="screen",
     )
 
-    cirtesu_static_tf = Node(
-        package='tf2_ros',
-        executable='static_transform_publisher',
-        output='screen',
-        arguments=[
-            "--x", "0",
-            "--y", "0",
-            "--z", "0.0",
-            "--roll", "0.0",
-            "--pitch", "3.1416",
-            "--yaw", "0",
-            "--frame-id", "world_ned",
-            "--child-frame-id", "cirtesu_tank"
-        ]
+    dvl_to_twist_node = Node(
+        package="cirtesub_stonefish",
+        executable="dvl_to_twist.py",
+        name="dvl_to_twist",
+        output="screen",
     )
 
     rsp_node_cirtesub = Node(
@@ -134,17 +115,6 @@ def generate_launch_description():
             ("/robot_description", "/cirtesub/robot_description"),
             ("/joint_states", "/cirtesub/joint_states")
         ],
-    )
-
-    rsp_node_cirtesu = Node(
-        package='robot_state_publisher',
-        executable='robot_state_publisher',
-        output='screen',
-        name='robot_state_publisher_cirtesu',
-        remappings=[('/robot_description', '/cirtesu/robot_description')],
-        parameters=[{
-            'robot_description': robot_description_cirtesu
-        }]
     )
 
     rviz_node = Node(
@@ -174,11 +144,10 @@ def generate_launch_description():
     return LaunchDescription([
         namespace_action,
         rsp_node_cirtesub,
-        rsp_node_cirtesu,
         rviz_node,
         odom_tf_node,
+        dvl_to_twist_node,
         battery_status_simulated_node,
         leak_sensors_simulated_node,
         static_transform_publisher_node,
-        cirtesu_static_tf
     ])
