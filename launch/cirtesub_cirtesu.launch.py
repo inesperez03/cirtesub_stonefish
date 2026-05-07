@@ -1,15 +1,10 @@
 from launch import LaunchDescription
 from launch.actions import GroupAction, IncludeLaunchDescription
-from launch.substitutions import PathJoinSubstitution, Command
+from launch.substitutions import PathJoinSubstitution
 from launch_ros.actions import Node
 from launch_ros.substitutions import FindPackageShare
 
 def generate_launch_description():
-
-    rviz_config_file = PathJoinSubstitution([
-        FindPackageShare("cirtesub_stonefish"),
-        "config", "cirtesub.rviz"
-    ])
 
     battery_status_config = PathJoinSubstitution([
         FindPackageShare("cirtesub_stonefish"),
@@ -21,23 +16,6 @@ def generate_launch_description():
         "config", "leak_sensors_simulated.yaml"
     ])
 
-    description_file_fish = PathJoinSubstitution([
-        FindPackageShare("cirtesub_description"),
-        "urdf", "cirtesub_dual_alpha.urdf.xacro"
-    ])
-
-    lookup_csv_file = PathJoinSubstitution([
-        FindPackageShare("thrusters_hardware_interface"),
-        "config", "t500_lookup.csv"
-    ])
-
-    robot_description_cirtesub = Command([
-        "xacro", " ",
-        description_file_fish, " ",
-        "lookup_csv:=", lookup_csv_file, " ",
-        "use_sim:=true"
-    ])
-    
     namespace_action = GroupAction(
         actions=[
             IncludeLaunchDescription(
@@ -103,28 +81,6 @@ def generate_launch_description():
         output="screen",
     )
 
-    rsp_node_cirtesub = Node(
-        package="robot_state_publisher",
-        executable="robot_state_publisher",
-        name="robot_state_publisher_cirtesub",
-        output="screen",
-        parameters=[{
-            "robot_description": robot_description_cirtesub
-        }],
-        remappings=[
-            ("/robot_description", "/cirtesub/robot_description"),
-            ("/joint_states", "/cirtesub/joint_states")
-        ],
-    )
-
-    rviz_node = Node(
-        package="rviz2",
-        executable="rviz2",
-        name="rviz2",
-        output="screen",
-        arguments=["-d", rviz_config_file],
-    )
-
     battery_status_simulated_node = Node(
         package="cirtesub_stonefish",
         executable="battery_status_simulated.py",
@@ -143,8 +99,6 @@ def generate_launch_description():
 
     return LaunchDescription([
         namespace_action,
-        rsp_node_cirtesub,
-        rviz_node,
         odom_tf_node,
         dvl_to_twist_node,
         battery_status_simulated_node,
