@@ -1320,7 +1320,7 @@
 			<noise angle="0.01 0.01 0.02" angular_velocity="0.01" yaw_drift="0.0000" linear_acceleration="0.02"/>
 			<history samples="1"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 3.1416 1.57"/>
-			<ros_publisher topic="/cirtesub/sensors/imu"/>
+			<ros_publisher topic="/cirtesub/stonefish/sensors/imu"/>
 			<link name="Vehicle"/>
 		</sensor>
 
@@ -1329,7 +1329,7 @@
 			<noise pressure="0.1"/>
 			<history samples="1"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
-			<ros_publisher topic="/cirtesub/sensors/pressure"/>
+			<ros_publisher topic="/cirtesub/stonefish/sensors/pressure"/>
 			<link name="Vehicle"/>
 		</sensor>
 
@@ -1337,7 +1337,7 @@
 			<noise ned_position="0.1"/>
 			<history samples="1"/>
 			<origin xyz="0.0 0.0 0.50" rpy="0.0 3.1416 1.57"/>
-			<ros_publisher topic="/cirtesub/sensors/gps"/>
+			<ros_publisher topic="/cirtesub/stonefish/sensors/gps"/>
 			<link name="Vehicle"/>
 		</sensor>
 
@@ -1348,7 +1348,7 @@
 			<noise velocity_percent="1.01" velocity="0.0001" altitude="0.001" water_velocity_percent="0.1" water_velocity="0.1"/>
 			<history samples="1"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 3.1416 1.57"/>
-			<ros_publisher topic="/cirtesub/sensors/dvl" altitude_topic="/cirtesub/sensors/dvl/altitude"/>
+			<ros_publisher topic="/cirtesub/stonefish/sensors/dvl" altitude_topic="/cirtesub/stonefish/sensors/dvl/altitude"/>
 			<link name="Vehicle"/>
 		</sensor>
 
