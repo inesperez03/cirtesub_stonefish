@@ -30,9 +30,9 @@ def generate_launch_description():
                         FindPackageShare('cirtesub_stonefish'), 'scenarios', 'cirtesub_cirtesu_arucos.scn'
                     ]),
                     'simulation_rate': '50.0',
-                    'window_res_x': '1200',
-                    'window_res_y': '800',
-                    'rendering_quality': 'high'
+                    'window_res_x': '800',
+                    'window_res_y': '600',
+                    'rendering_quality': 'low'
                 }.items()
             ),
         ]
@@ -63,27 +63,16 @@ def generate_launch_description():
         output="screen",
     )
 
-    odom_tf_node = Node(
-        package="cirtesub_stonefish",
-        executable="odom2tf.py",
-        name="odom_tf",
-        remappings=[
-            ("/odom_topic", "/cirtesub/odometry"),
-        ],
-        parameters=[{"fixed_frame": "world_ned", "base_link": "cirtesub/base_link"}],
-        output="screen",
-    )
-
     dvl_to_twist_node = Node(
         package="cirtesub_stonefish",
-        executable="dvl_to_twist.py",
+        executable="dvl_to_twist_node",
         name="dvl_to_twist",
         output="screen",
     )
 
     battery_status_simulated_node = Node(
         package="cirtesub_stonefish",
-        executable="battery_status_simulated.py",
+        executable="battery_status_simulated",
         name="battery_status_simulated",
         output="screen",
         parameters=[battery_status_config],
@@ -91,7 +80,7 @@ def generate_launch_description():
 
     leak_sensors_simulated_node = Node(
         package="cirtesub_stonefish",
-        executable="leak_sensors_simulated.py",
+        executable="leak_sensors_simulated",
         name="leak_sensors_simulated",
         output="screen",
         parameters=[leak_sensors_config],
@@ -99,7 +88,6 @@ def generate_launch_description():
 
     return LaunchDescription([
         namespace_action,
-        odom_tf_node,
         dvl_to_twist_node,
         battery_status_simulated_node,
         leak_sensors_simulated_node,

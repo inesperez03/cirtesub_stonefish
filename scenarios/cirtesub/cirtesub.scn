@@ -883,6 +883,6 @@
 		<ros_publisher servos="/pez/joint_states"/> -->
 		<ros_subscriber thrusters="/cirtesub/controller/thruster_setpoints_sim" forces="/cirtesub/controller/thruster_manager/input_stamped"/>
 		<ros_publisher thrusters="/cirtesub/controller/thruster_state" forces="/cirtesub/controller/thruster_manager/output"/>
-        <ros_base_link_transforms publish="true"/>
+        <ros_base_link_transforms publish="false"/>
 	</robot>
 </scenario>
