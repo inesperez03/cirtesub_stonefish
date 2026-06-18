@@ -1012,7 +1012,7 @@
 		<joint name="VehicleToArmL" type="fixed">
 			<parent name="Vehicle"/>
 			<child name="m3_inlineL"/>
-			<origin rpy="-1.57 0.0 -1.5708" xyz="0.165 -0.215 0.0"/>
+			<origin rpy="-1.5708 0.0 -1.5708" xyz="0.165 -0.215 0.0"/>
 		</joint>
 
 		<joint name="alpha_left/axis_e" type="revolute">
@@ -1055,12 +1055,12 @@
 			<limits min="0.0" max="3.22"/>
 		</joint>
 		
-		 <joint name="alpha_axis_a1L" type="revolute">
+		 <joint name="alpha_left/axis_a1L" type="revolute">
 			<parent name="rs1_124L"/>
 			<child name="rs1_130L"/>
 			<origin rpy="3.14 0.0 0.0" xyz="0.0 0.0 -0.00"/>
 			<axis xyz="0.0 1.0 0.0"/>
-			<limits min="-0.5" max="0.5"/>
+			<limits min="-0.5" max="0.125"/>
 		</joint>
 	
 		<joint name="alpha_left/axis_a" type="revolute">
@@ -1068,12 +1068,18 @@
 			<child name="rs1_139L"/>
 			<origin rpy="3.14 0.0 0.0" xyz="0.0 0.0 0.00"/>
 			<axis xyz="0.0 1.0 0.0"/>
-			<limits min="-0.5" max="0.125"/>
+			<limits min="-0.125" max="0.5"/>
 		</joint>			
 
 					
 		<actuator name="Servo5L" type="servo">
 			<joint name="alpha_left/axis_a"/>
+			<controller position_gain="0.1" velocity_gain="1.0" max_torque="100.0"/>
+			<initial position="0.125"/>
+		</actuator>
+
+		<actuator name="Servo6L" type="servo">
+			<joint name="alpha_left/axis_a1L"/>
 			<controller position_gain="0.1" velocity_gain="1.0" max_torque="100.0"/>
 			<initial position="0.125"/>
 		</actuator>
@@ -1255,12 +1261,12 @@
 			<limits min="0.0" max="3.22"/>
 		</joint>
 		
-		<joint name="alpha_axis_a1R" type="revolute">
+		<joint name="alpha_right/axis_a1R" type="revolute">
 			<parent name="rs1_124R"/>
 			<child name="rs1_130R"/>
 			<origin rpy="3.14 0.0 0.0" xyz="0.0 0.0 -0.00"/>
 			<axis xyz="0.0 1.0 0.0"/>
-			<limits min="-0.5" max="0.5"/>
+			<limits min="-0.5" max="0.125"/>
 		</joint>
 	
 		<joint name="alpha_right/axis_a" type="revolute">
@@ -1268,7 +1274,7 @@
 			<child name="rs1_139R"/>
 			<origin rpy="3.14 0.0 0.0" xyz="0.0 0.0 0.00"/>
 			<axis xyz="0.0 1.0 0.0"/>
-			<limits min="-0.5" max="0.125"/>
+			<limits min="-0.125" max="0.5"/>
 		</joint>			
 			
 		<actuator name="Servo5R" type="servo">
@@ -1276,6 +1282,12 @@
 			<controller position_gain="0.1" velocity_gain="1.0" max_torque="100.0"/>
 			<initial position="0.125"/>
 		</actuator> 
+
+		<actuator name="Servo6R" type="servo">
+			<joint name="alpha_right/axis_a1R"/>
+			<controller position_gain="0.1" velocity_gain="1.0" max_torque="100.0"/>
+			<initial position="0.125"/>
+		</actuator>
 
 		<actuator name="Servo4R" type="servo">
 			<joint name="alpha_right/axis_b"/>
@@ -1362,7 +1374,7 @@
 
         <!-- Publicación de TF dinámico del base_link -->
 		<ros_subscriber thrusters="/cirtesub/controller/thruster_setpoints_sim" forces="/cirtesub/controller/thruster_manager/input_stamped" servos="/cirtesub/alpha/desired_joint_states"/>
-		<ros_publisher thrusters="/cirtesub/controller/thruster_state" forces="/cirtesub/controller/thruster_manager/output" servos="/cirtesub/alpha/joint_states"/>
+		<ros_publisher thrusters="/cirtesub/controller/thruster_state" forces="/cirtesub/controller/thruster_manager/output" servos="/cirtesub/stonefish/alpha/joint_states"/>
         <ros_base_link_transforms publish="false"/>
 	</robot>
 </scenario>
