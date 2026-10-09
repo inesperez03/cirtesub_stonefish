@@ -905,20 +905,6 @@
 			<look name="black"/>	
 		</link>
 
-        <link name="m2L" type="model" physics="submerged">
-			<physical>
-				<mesh filename="alpha/m2_v2.obj" scale="1.0"/>
-				<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
-			</physical>
-			<visual>
-				<mesh filename="alpha/m2_v2.obj" scale="1.0"/>
-				<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
-			</visual>
-			<material name="Neutral"/>
-			<mass value="0.3"/>
-			<look name="black"/>	
-		</link>
-
         <link name="m2_1_1L" type="model" physics="submerged">
 			<physical>
 				<mesh filename="alpha/m2_1_1_v2.obj" scale="1.0"/>
@@ -932,6 +918,19 @@
 			<look name="black"/>	
 		</link>
 		
+		<link name="m2L" type="model" physics="submerged">
+			<physical>
+				<mesh filename="alpha/m2_v2.obj" scale="1.0"/>
+				<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</physical>
+			<visual>
+				<mesh filename="alpha/m2_v2.obj" scale="1.0"/>
+				<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</visual>
+			<material name="Neutral"/>
+			<mass value="0.3"/>
+			<look name="black"/>	
+		</link>
 		
         <link name="m2_1_3L" type="model" physics="submerged">
 			<physical>
@@ -960,6 +959,7 @@
 			<mass value="0.1"/>
 		</link>
 
+		<!-- este va comentado	 -->
 		<!-- <link name="rs1L" type="model" physics="submerged">
 			<physical>
 				<mesh filename="alpha/rs1_124_compl.obj" scale="1.0"/>
@@ -973,6 +973,7 @@
 			<look name="black"/>	
 			<mass value="0.1"/>
 		</link> -->
+		<!-- aqui termina lo comentado -->
 
         <link name="rs1_124L" type="model" physics="submerged">
 			<physical>
@@ -988,7 +989,6 @@
 			<mass value="0.0005"/>
 		</link>
 				
-
         <link name="rs1_130L" type="model" physics="submerged">
 			<physical>
 				<mesh filename="alpha/rs1_130_fin_v3.obj" scale="1.0"/>
@@ -1007,12 +1007,12 @@
 			<material name="Polyamid"/>
 			<look name="gray"/>	
 			<mass value="0.0001"/>
-		</link>	
+		</link>
 		
 		<joint name="VehicleToArmL" type="fixed">
 			<parent name="Vehicle"/>
 			<child name="m3_inlineL"/>
-			<origin rpy="-1.5708 0.0 -1.5708" xyz="0.165 -0.215 0.0"/>
+			<origin rpy="0.0 0.0 -1.5708" xyz="0.165 -0.215 0.0"/>
 		</joint>
 
 		<joint name="alpha_left/axis_e" type="revolute">
@@ -1055,7 +1055,7 @@
 			<limits min="0.0" max="3.22"/>
 		</joint>
 		
-		 <joint name="alpha_left/axis_a1L" type="revolute">
+		<joint name="alpha_left/axis_a1L" type="revolute">
 			<parent name="rs1_124L"/>
 			<child name="rs1_130L"/>
 			<origin rpy="3.14 0.0 0.0" xyz="0.0 0.0 -0.00"/>
@@ -1082,7 +1082,7 @@
 			<joint name="alpha_left/axis_a1L"/>
 			<controller position_gain="0.1" velocity_gain="1.0" max_torque="100.0"/>
 			<initial position="0.125"/>
-		</actuator>
+		</actuator> 
 
 		<actuator name="Servo4L" type="servo">
 			<joint name="alpha_left/axis_b"/>
@@ -1093,23 +1093,20 @@
 		<actuator name="Servo3L" type="servo">
 			<joint name="alpha_left/axis_c"/>
 			<controller position_gain="1.0" velocity_gain="1.0" max_torque="1000.0"/>
-			<!-- <initial position="3.0"/> -->
 			<initial position="0.0"/>
-		</actuator>
+		</actuator> 
 
 		<actuator name="Servo2L" type="servo">
 			<joint name="alpha_left/axis_d"/>
 			<controller position_gain="1.0" velocity_gain="1.0" max_torque="1000.0"/>
-			<!-- <initial position="2.5"/> -->
 			<initial position="0.0"/>
 		</actuator>
 
 		<actuator name="Servo1L" type="servo">
 			<joint name="alpha_left/axis_e"/>
 			<controller position_gain="1.0" velocity_gain="1.0" max_torque="1000.0"/>
-			<!-- <initial position="3.1416"/> -->
-			<initial position="3.0"/>
-		</actuator>
+			<initial position="0.0"/>
+		</actuator> 
 
 		<!-- Links Alpha right-->
         <link name="m3_inlineR" type="model" physics="submerged">
@@ -1217,7 +1214,7 @@
 		<joint name="VehicleToArmR" type="fixed">
 			<parent name="Vehicle"/>
 			<child name="m3_inlineR"/>
-			<origin rpy="1.57 0.0 -1.5708" xyz="-0.165 -0.210 0.043"/>
+			<origin rpy="0.0 0.0 -1.5708" xyz="-0.165 -0.210 0.043"/>
 			<!-- <origin rpy="-1.57 0.0 -1.5708" xyz="0.085818 -0.210 -0.042158"/> -->
 		</joint>
 
