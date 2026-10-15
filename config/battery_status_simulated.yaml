@@ -1,0 +1,18 @@
+battery_status_simulated:
+  ros__parameters:
+    battery_topic: /cirtesub/battery/status
+    thruster_topics:
+      - /cirtesub/controller/thruster_setpoints_sim
+    publish_period: 1.0
+    nominal_voltage: 22.2
+    voltage_oscillation_amplitude: 0.15
+    voltage_oscillation_period: 12.0
+    cell_count: 6
+    full_cell_voltage: 4.2
+    empty_cell_voltage: 3.2
+    design_capacity_ah: 16.0
+    jetson_current_a: 2.0
+    base_electronics_current_a: 0.5
+    current_per_thruster_unit_a: 8.0
+    max_thruster_command: 1.0
+    stale_thruster_timeout: 2.0

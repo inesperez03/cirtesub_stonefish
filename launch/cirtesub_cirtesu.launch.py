@@ -7,6 +7,13 @@ from launch_ros.substitutions import FindPackageShare
 
 def generate_launch_description():
 
+    battery_status_config = PathJoinSubstitution([
+        FindPackageShare('cirtesub_stonefish'), 'config', 'battery_status_simulated.yaml'
+    ])
+    leak_sensors_config = PathJoinSubstitution([
+        FindPackageShare('cirtesub_stonefish'), 'config', 'leak_sensors_simulated.yaml'
+    ])
+
     rviz_config_file = PathJoinSubstitution([
         EnvironmentVariable("HOME"),
         "entornos_stonefish", "src", "cirtesub_stonefish", "config", "cirtesub.rviz"
@@ -86,6 +93,29 @@ def generate_launch_description():
         output="screen",
     )
 
+    dvl_to_twist_node = Node(
+        package='cirtesub_stonefish',
+        executable='dvl_to_twist_node',
+        name='dvl_to_twist',
+        output='screen',
+    )
+
+    battery_status_simulated_node = Node(
+        package='cirtesub_stonefish',
+        executable='battery_status_simulated',
+        name='battery_status_simulated',
+        output='screen',
+        parameters=[battery_status_config],
+    )
+
+    leak_sensors_simulated_node = Node(
+        package='cirtesub_stonefish',
+        executable='leak_sensors_simulated',
+        name='leak_sensors_simulated',
+        output='screen',
+        parameters=[leak_sensors_config],
+    )
+
     cirtesu_static_tf = Node(
         package='tf2_ros',
         executable='static_transform_publisher',
@@ -107,6 +137,9 @@ def generate_launch_description():
     return LaunchDescription([
         namespace_action,
         odom_tf_node,
+        dvl_to_twist_node,
+        battery_status_simulated_node,
+        leak_sensors_simulated_node,
         static_transform_publisher_node,
         cirtesu_static_tf
     ])

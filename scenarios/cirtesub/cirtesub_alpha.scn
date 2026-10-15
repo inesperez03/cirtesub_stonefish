@@ -838,10 +838,10 @@
 			</internal_part>
 		</base_link>
 
-		<actuator name="Thruster_up_left" type="thruster">
-			<origin rpy="0.0 1.5708 0.0" xyz="0.304457 0.02257 0.168299"/>
-			<specs max_setpoint="${3278.0/60.0*2.0*pi}" inverted_setpoint="true" normalized_setpoint="true"/>
-			<propeller diameter="0.07" right="true">
+		<actuator name="Thruster_up_front" type="thruster">
+			<origin rpy="0.0 1.5708 0.0" xyz="-0.00033  -0.249237 0.168299"/>
+			 <specs max_setpoint="${4000.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="true"/>
+			<propeller diameter="0.07" right="false">
 				<mesh filename="cirtesub/Propeller.obj" scale="1.0"/>
 				<material name="Neutral"/>
 				<look name="propeller"/>
@@ -854,15 +854,57 @@
 				<ilimit value="2.0"/>
 			</rotor_dynamics>
 			<thrust_model type="fluid_dynamics">
-				<thrust_coeff forward="0.52" reverse="0.48"/>
+				<thrust_coeff forward="1.0" reverse="1.0"/>
+				<torque_coeff value="0.001"/>
+			</thrust_model>
+		</actuator>
+
+		<actuator name="Thruster_up_back" type="thruster">
+			<origin rpy="0.0 1.5708 0.0" xyz="-0.00033  0.294527 0.168299"/>
+			 <specs max_setpoint="${4000.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="true"/>
+			<propeller diameter="0.07" right="false">
+				<mesh filename="cirtesub/Propeller.obj" scale="1.0"/>
+				<material name="Neutral"/>
+				<look name="propeller"/>
+			</propeller>
+			<link name="Vehicle"/>
+			<rotor_dynamics type="mechanical_pi">
+				<rotor_inertia value="0.05"/>
+				<kp value="0.8"/>
+				<ki value="0.2"/>
+				<ilimit value="2.0"/>
+			</rotor_dynamics>
+			<thrust_model type="fluid_dynamics">
+				<thrust_coeff forward="1.0" reverse="1.0"/>
+				<torque_coeff value="0.001"/>
+			</thrust_model>
+		</actuator>
+
+		<actuator name="Thruster_up_left" type="thruster">
+			<origin rpy="0.0 1.5708 0.0" xyz="0.304457 0.02257 0.168299"/>
+			 <specs max_setpoint="${4000.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="true"/>
+			<propeller diameter="0.07" right="false">
+				<mesh filename="cirtesub/Propeller.obj" scale="1.0"/>
+				<material name="Neutral"/>
+				<look name="propeller"/>
+			</propeller>
+			<link name="Vehicle"/>
+			<rotor_dynamics type="mechanical_pi">
+				<rotor_inertia value="0.05"/>
+				<kp value="0.8"/>
+				<ki value="0.2"/>
+				<ilimit value="2.0"/>
+			</rotor_dynamics>
+			<thrust_model type="fluid_dynamics">
+				<thrust_coeff forward="1.0" reverse="1.0"/>
 				<torque_coeff value="0.001"/>
 			</thrust_model>
 		</actuator>
 
 		<actuator name="Thruster_up_right" type="thruster">
 			<origin rpy="0.0 1.5708 0.0" xyz="-0.30517 0.022882 0.168299"/>
-			<specs max_setpoint="${3278.0/60.0*2.0*pi}" inverted_setpoint="true" normalized_setpoint="true"/>
-			<propeller diameter="0.07" right="true">
+			 <specs max_setpoint="${4000.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="true"/>
+			<propeller diameter="0.07" right="false">
 				<mesh filename="cirtesub/Propeller.obj" scale="1.0"/>
 				<material name="Neutral"/>
 				<look name="propeller"/>
@@ -875,15 +917,15 @@
 				<ilimit value="2.0"/>
 			</rotor_dynamics>
 			<thrust_model type="fluid_dynamics">
-				<thrust_coeff forward="0.52" reverse="0.48"/>
+				<thrust_coeff forward="1.0" reverse="1.0"/>
 				<torque_coeff value="0.001"/>
 			</thrust_model>
 		</actuator>
 
-		<actuator name="Thruster_up_front" type="thruster">
-			<origin rpy="0.0 1.5708 0.0" xyz="-0.00033  0.294527 0.168299"/>
-			<specs max_setpoint="${3278.0/60.0*2.0*pi}" inverted_setpoint="true" normalized_setpoint="true"/>
-			<propeller diameter="0.07" right="true">
+		<actuator name="Thruster_down_backleft" type="thruster">
+			<origin rpy="0.0 0.0 5.4978" xyz="0.209105 0.208946 0.079618"/>
+			<specs max_setpoint="${4000.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="true"/>
+			<propeller diameter="0.1145" right="false">
 				<mesh filename="cirtesub/Propeller.obj" scale="1.0"/>
 				<material name="Neutral"/>
 				<look name="propeller"/>
@@ -896,77 +938,14 @@
 				<ilimit value="2.0"/>
 			</rotor_dynamics>
 			<thrust_model type="fluid_dynamics">
-				<thrust_coeff forward="0.52" reverse="0.48"/>
-				<torque_coeff value="0.001"/>
-			</thrust_model>
-		</actuator>
-
-		<actuator name="Thruster_up_back" type="thruster">
-			<origin rpy="0.0 1.5708 0.0" xyz="-0.00033  -0.249237 0.168299"/>
-			<specs max_setpoint="${3278.0/60.0*2.0*pi}" inverted_setpoint="true" normalized_setpoint="true"/>
-			<propeller diameter="0.07" right="true">
-				<mesh filename="cirtesub/Propeller.obj" scale="1.0"/>
-				<material name="Neutral"/>
-				<look name="propeller"/>
-			</propeller>
-			<link name="Vehicle"/>
-			<rotor_dynamics type="mechanical_pi">
-				<rotor_inertia value="0.05"/>
-				<kp value="0.8"/>
-				<ki value="0.2"/>
-				<ilimit value="2.0"/>
-			</rotor_dynamics>
-			<thrust_model type="fluid_dynamics">
-				<thrust_coeff forward="0.52" reverse="0.48"/>
-				<torque_coeff value="0.001"/>
-			</thrust_model>
-		</actuator>
-
-		<actuator name="Thruster_down_frontleft" type="thruster">
-			<origin rpy="0.0 0.0 3.9262" xyz="0.208758 -0.164187 0.081187"/>
-			<specs max_setpoint="324.6312409" inverted_setpoint="true" normalized_setpoint="true"/>
-			<propeller diameter="0.1145" right="true">
-				<mesh filename="cirtesub/Propeller.obj" scale="1.0"/>
-				<material name="Neutral"/>
-				<look name="propeller"/>
-			</propeller>
-			<link name="Vehicle"/>
-			<rotor_dynamics type="mechanical_pi">
-				<rotor_inertia value="0.05"/>
-				<kp value="0.8"/>
-				<ki value="0.2"/>
-				<ilimit value="2.0"/>
-			</rotor_dynamics>
-			<thrust_model type="fluid_dynamics">
-				<thrust_coeff forward="0.605" reverse="0.395"/>
-				<torque_coeff value="0.001"/>
-			</thrust_model>
-		</actuator>
-
-		<actuator name="Thruster_down_frontright" type="thruster">
-			<origin rpy="0.0 0.0 2.3562" xyz="-0.211056 -0.164187 0.079618"/>
-			<specs max_setpoint="324.6312409" inverted_setpoint="true" normalized_setpoint="true"/>
-			<propeller diameter="0.1145" right="true">
-				<mesh filename="cirtesub/Propeller.obj" scale="1.0"/>
-				<material name="Neutral"/>
-				<look name="propeller"/>
-			</propeller>
-			<link name="Vehicle"/>
-			<rotor_dynamics type="mechanical_pi">
-				<rotor_inertia value="0.05"/>
-				<kp value="0.8"/>
-				<ki value="0.2"/>
-				<ilimit value="2.0"/>
-			</rotor_dynamics>
-			<thrust_model type="fluid_dynamics">
-				<thrust_coeff forward="0.605" reverse="0.395"/>
+				<thrust_coeff forward="1.0" reverse="1.0"/>
 				<torque_coeff value="0.001"/>
 			</thrust_model>
 		</actuator>
 
 		<actuator name="Thruster_down_backright" type="thruster">
 			<origin rpy="0.0 0.0 0.7854" xyz="-0.211056 0.203845 0.079618"/>
-			<specs max_setpoint="324.6312409" inverted_setpoint="true" normalized_setpoint="true"/>
+			<specs max_setpoint="${4000.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="true"/>
 			<propeller diameter="0.1145" right="true">
 				<mesh filename="cirtesub/Propeller.obj" scale="1.0"/>
 				<material name="Neutral"/>
@@ -980,13 +959,14 @@
 				<ilimit value="2.0"/>
 			</rotor_dynamics>
 			<thrust_model type="fluid_dynamics">
-				<thrust_coeff forward="0.605" reverse="0.395"/>
+				<thrust_coeff forward="1.0" reverse="1.0"/>
 				<torque_coeff value="0.001"/>
 			</thrust_model>
 		</actuator>
-		<actuator name="Thruster_down_backleft" type="thruster">
-			<origin rpy="0.0 0.0 5.4978" xyz="0.209105 0.208946 0.079618"/>
-			<specs max_setpoint="324.6312409" inverted_setpoint="true" normalized_setpoint="true"/>
+
+		<actuator name="Thruster_down_frontleft" type="thruster">
+			<origin rpy="0.0 0.0 3.9262" xyz="0.208758 -0.164187 0.081187"/>
+			 <specs max_setpoint="${4000.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="true"/>
 			<propeller diameter="0.1145" right="true">
 				<mesh filename="cirtesub/Propeller.obj" scale="1.0"/>
 				<material name="Neutral"/>
@@ -1000,7 +980,28 @@
 				<ilimit value="2.0"/>
 			</rotor_dynamics>
 			<thrust_model type="fluid_dynamics">
-				<thrust_coeff forward="0.605" reverse="0.395"/>
+				<thrust_coeff forward="1.0" reverse="1.0"/>
+				<torque_coeff value="0.001"/>
+			</thrust_model>
+		</actuator>
+
+		<actuator name="Thruster_down_frontright" type="thruster">
+			<origin rpy="0.0 0.0 2.3562" xyz="-0.211056 -0.164187 0.079618"/>
+			 <specs max_setpoint="${4000.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="true"/>
+			<propeller diameter="0.1145" right="false">
+				<mesh filename="cirtesub/Propeller.obj" scale="1.0"/>
+				<material name="Neutral"/>
+				<look name="propeller"/>
+			</propeller>
+			<link name="Vehicle"/>
+			<rotor_dynamics type="mechanical_pi">
+				<rotor_inertia value="0.05"/>
+				<kp value="0.8"/>
+				<ki value="0.2"/>
+				<ilimit value="2.0"/>
+			</rotor_dynamics>
+			<thrust_model type="fluid_dynamics">
+				<thrust_coeff forward="1.0" reverse="1.0"/>
 				<torque_coeff value="0.001"/>
 			</thrust_model>
 		</actuator>
@@ -1129,7 +1130,7 @@
 			<origin rpy="0.0 0.0 -1.5708" xyz="0.227246 -0.151838 -0.020496"/>
 		</joint>
 
-		<joint name="alpha_axis_eL" type="revolute">
+		<joint name="alpha_left/axis_e" type="revolute">
 			<parent name="m3_inlineL"/>
 			<child name="m2_1_1L"/>
 			<origin rpy="3.14 0.0 0.0" xyz="0.120683 -0.021096 -0.025"/>
@@ -1137,7 +1138,7 @@
 			<limits min="0" max="6.1"/>
 		</joint>
 		
-		<joint name="alpha_axis_dL" type="revolute">
+		<joint name="alpha_left/axis_d" type="revolute">
 			<parent name="m2_1_1L"/>
 			<child name="m2L"/>
 			<origin rpy="0.0 1.92 0.0" xyz="0.023 0.0 0.033"/>
@@ -1146,7 +1147,7 @@
 		</joint>
 		
 
-		<joint name="alpha_axis_cL" type="revolute">
+		<joint name="alpha_left/axis_c" type="revolute">
 			<parent name="m2L"/>
 			<child name="m2_1_3L"/>
 			<origin rpy="0.0 2.8 0.0" xyz="0.13 -0.015 0.08"/>
@@ -1161,7 +1162,7 @@
 			<axis xyz="0.0 -1.0 0.0"/>
 		</joint>
 
-		<joint name="alpha_axis_bL" type="revolute">
+		<joint name="alpha_left/axis_b" type="revolute">
 			<parent name="rs1L"/>
 			<child name="rs1_124L"/>
 			<origin rpy="0.0 0.0 0.0" xyz="0.1025 0.0 0.0"/>
@@ -1169,7 +1170,7 @@
 			<limits min="0.0" max="3.22"/>
 		</joint>
 		
-		 <joint name="alpha_axis_a1L" type="revolute">
+		 <joint name="alpha_left/axis_a1L" type="revolute">
 			<parent name="rs1_124L"/>
 			<child name="rs1_130L"/>
 			<origin rpy="3.14 0.0 0.0" xyz="0.0 0.0 -0.00"/>
@@ -1177,7 +1178,7 @@
 			<limits min="-0.5" max="0.5"/>
 		</joint>
 	
-		<joint name="alpha_axis_aL" type="revolute">
+		<joint name="alpha_left/axis_a" type="revolute">
 			<parent name="rs1_124L"/>
 			<child name="rs1_139L"/>
 			<origin rpy="3.14 0.0 0.0" xyz="0.0 0.0 0.00"/>
@@ -1185,35 +1186,40 @@
 			<limits min="-0.5" max="0.125"/>
 		</joint>			
 
-					
+		<actuator name="Servo6L" type="servo">
+			<joint name="alpha_left/axis_a1L"/>
+			<controller position_gain="0.1" velocity_gain="1.0" max_torque="100.0"/>
+			<initial position="0.125"/>
+		</actuator>
+
 		<actuator name="Servo5L" type="servo">
-			<joint name="alpha_axis_aL"/>
+			<joint name="alpha_left/axis_a"/>
 			<controller position_gain="0.1" velocity_gain="1.0" max_torque="100.0"/>
 			<initial position="0.125"/>
 		</actuator>
 
 		<actuator name="Servo4L" type="servo">
-			<joint name="alpha_axis_bL"/>
+			<joint name="alpha_left/axis_b"/>
 			<controller position_gain="1.0" velocity_gain="1.0" max_torque="100.0"/>
 			<initial position="0.0"/>
 		</actuator>
 
 		<actuator name="Servo3L" type="servo">
-			<joint name="alpha_axis_cL"/>
+			<joint name="alpha_left/axis_c"/>
 			<controller position_gain="1.0" velocity_gain="1.0" max_torque="1000.0"/>
 			<!-- <initial position="3.0"/> -->
 			<initial position="0.0"/>
 		</actuator>
 
 		<actuator name="Servo2L" type="servo">
-			<joint name="alpha_axis_dL"/>
+			<joint name="alpha_left/axis_d"/>
 			<controller position_gain="1.0" velocity_gain="1.0" max_torque="1000.0"/>
 			<!-- <initial position="2.5"/> -->
 			<initial position="0.0"/>
 		</actuator>
 
 		<actuator name="Servo1L" type="servo">
-			<joint name="alpha_axis_eL"/>
+			<joint name="alpha_left/axis_e"/>
 			<controller position_gain="1.0" velocity_gain="1.0" max_torque="1000.0"/>
 			<!-- <initial position="3.1416"/> -->
 			<initial position="0.0"/>
@@ -1329,7 +1335,7 @@
 			<!-- <origin rpy="-1.57 0.0 -1.5708" xyz="0.085818 -0.210 -0.042158"/> -->
 		</joint>
 
-		<joint name="alpha_axis_eR" type="revolute">
+		<joint name="alpha_right/axis_e" type="revolute">
 			<parent name="m3_inlineR"/>
 			<child name="m2_1_1R"/>
 			<origin rpy="3.14 0.0 0" xyz="0.120683 -0.021096 -0.025"/>
@@ -1337,7 +1343,7 @@
 			<limits min="0" max="6.1"/>
 		</joint>
 		
-		<joint name="alpha_axis_dR" type="revolute">
+		<joint name="alpha_right/axis_d" type="revolute">
 			<parent name="m2_1_1R"/>
 			<child name="m2R"/>
 			<origin rpy="0.0 1.92 0.0" xyz="0.023 0.0 0.033"/>
@@ -1346,7 +1352,7 @@
 		</joint>
 		
 
-		<joint name="alpha_axis_cR" type="revolute">
+		<joint name="alpha_right/axis_c" type="revolute">
 			<parent name="m2R"/>
 			<child name="m2_1_3R"/>
 			<origin rpy="0.0 2.8 0.0" xyz="0.13 -0.015 0.08"/>
@@ -1361,7 +1367,7 @@
 			<axis xyz="0.0 -1.0 0.0"/>
 		</joint>
 
-		<joint name="alpha_axis_bR" type="revolute">
+		<joint name="alpha_right/axis_b" type="revolute">
 			<parent name="rs1R"/>
 			<child name="rs1_124R"/>
 			<origin rpy="0.0 0.0 0.0" xyz="0.1025 0.0 0.0"/>
@@ -1369,7 +1375,7 @@
 			<limits min="0.0" max="3.22"/>
 		</joint>
 		
-		<joint name="alpha_axis_a1R" type="revolute">
+		<joint name="alpha_right/axis_a1R" type="revolute">
 			<parent name="rs1_124R"/>
 			<child name="rs1_130R"/>
 			<origin rpy="3.14 0.0 0.0" xyz="0.0 0.0 -0.00"/>
@@ -1377,40 +1383,46 @@
 			<limits min="-0.5" max="0.5"/>
 		</joint>
 	
-		<joint name="alpha_axis_aR" type="revolute">
+		<joint name="alpha_right/axis_a" type="revolute">
 			<parent name="rs1_124R"/>
 			<child name="rs1_139R"/>
 			<origin rpy="3.14 0.0 0.0" xyz="0.0 0.0 0.00"/>
 			<axis xyz="0.0 1.0 0.0"/>
 			<limits min="-0.5" max="0.125"/>
-		</joint>			
-			
+		</joint>
+
+		<actuator name="Servo6R" type="servo">
+			<joint name="alpha_right/axis_a1R"/>
+			<controller position_gain="0.1" velocity_gain="1.0" max_torque="100.0"/>
+			<initial position="0.125"/>
+		</actuator>
+
 		<actuator name="Servo5R" type="servo">
-			<joint name="alpha_axis_aR"/>
+			<joint name="alpha_right/axis_a"/>
 			<controller position_gain="0.1" velocity_gain="1.0" max_torque="100.0"/>
 			<initial position="0.125"/>
 		</actuator> 
 
 		<actuator name="Servo4R" type="servo">
-			<joint name="alpha_axis_bR"/>
+			<joint name="alpha_right/axis_b"/>
 			<controller position_gain="1.0" velocity_gain="1.0" max_torque="100.0"/>
 			<initial position="0.0"/>
 		</actuator>
 
 		<actuator name="Servo3R" type="servo">
-			<joint name="alpha_axis_cR"/>
+			<joint name="alpha_right/axis_c"/>
 			<controller position_gain="1.0" velocity_gain="1.0" max_torque="1000.0"/>
 			<initial position="0.0"/>
 		</actuator> 
 
 		<actuator name="Servo2R" type="servo">
-			<joint name="alpha_axis_dR"/>
+			<joint name="alpha_right/axis_d"/>
 			<controller position_gain="1.0" velocity_gain="1.0" max_torque="1000.0"/>
 			<initial position="0.0"/>
 		</actuator>  
 
 		<actuator name="Servo1R" type="servo">
-			<joint name="alpha_axis_eR"/>
+			<joint name="alpha_right/axis_e"/>
 			<controller position_gain="1.0" velocity_gain="1.0" max_torque="1000.0"/>
 			<initial position="0.0"/>
 		</actuator>
@@ -1420,6 +1432,24 @@
 			<noise angle="0.1 0.1 0.5" angular_velocity="0.05" yaw_drift="0.001" linear_acceleration="0.1"/>
 			<history samples="1"/>
 			<origin xyz="0.1 0.0 0.0" rpy="0.0 0.0 0.0"/>
+			<ros_publisher topic="/cirtesub/stonefish/sensors/imu"/>
+			<link name="Vehicle"/>
+		</sensor>
+
+		<sensor name="Pressure" rate="50.0" type="pressure">
+			<range pressure="2941995.0"/>
+			<noise pressure="0.1"/>
+			<history samples="1"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+			<ros_publisher topic="/cirtesub/stonefish/sensors/pressure"/>
+			<link name="Vehicle"/>
+		</sensor>
+
+		<sensor name="GPS" rate="1.0" type="gps">
+			<noise ned_position="0.1"/>
+			<history samples="1"/>
+			<origin xyz="0.0 0.0 0.50" rpy="0.0 3.1416 1.57"/>
+			<ros_publisher topic="/cirtesub/stonefish/sensors/gps"/>
 			<link name="Vehicle"/>
 		</sensor>
 
@@ -1436,7 +1466,15 @@
 			<history samples="1"/>
 			<origin xyz="-0.175204 0.025424 -0.109382" rpy="0.0 0.0 0.0"/>
 			<link name="Vehicle"/>
-			<ros_publisher topic="/cirtesub/stonefish/dvl" altitude_topic="/cirtesub/stonefish/dvl/altitude"/>
+			<ros_publisher topic="/cirtesub/stonefish/sensors/dvl" altitude_topic="/cirtesub/stonefish/sensors/dvl/altitude"/>
+		</sensor>
+
+		<!-- Virtual front camera used by the newer ROS interface. -->
+		<sensor name="front_camera/camera" rate="10.0" type="camera">
+			<specs resolution_x="1280" resolution_y="720" horizontal_fov="82.0"/>
+			<origin xyz="0.0 -0.33 0.17" rpy="1.57 3.1416 0.0"/>
+			<link name="Vehicle"/>
+			<ros_publisher topic="/cirtesub/front_camera/camera"/>
 		</sensor>
 
 		<sensor name="camera_left" rate="60.0" type="camera">
@@ -1453,11 +1491,11 @@
 			<ros_publisher topic="/cirtesub/stonefish/right_camera"/>
 		</sensor>
 
-		<sensor name="camera_down" rate="30.0" type="camera">
+		<sensor name="down_camera/camera" rate="30.0" type="camera">
 			<specs resolution_x="1920" resolution_y="1080" horizontal_fov="82.0"/>
 			<origin xyz="0.186484 -0.004132 -0.148599" rpy="3.1415926536 0.0 3.1415926536"/>
 			<link name="Vehicle"/>
-			<ros_publisher topic="/cirtesub/stonefish/down_camera"/>
+			<ros_publisher topic="/cirtesub/down_camera/camera"/>
 		</sensor>
 
         <world_transform xyz="1.0 1.0 1.0" rpy="0.0 3.14 0.0"/>
@@ -1465,8 +1503,7 @@
         <!-- Publicación de TF dinámico del base_link -->
 		<!-- <ros_subscriber servos="/pez/servo_commands"/>
 		<ros_publisher servos="/pez/joint_states"/> -->
-		<ros_subscriber thrusters="/cirtesub/controller/thruster_setpoints_sim" forces="/cirtesub/controller/thruster_manager/input_stamped"/>
-		<ros_publisher thrusters="/cirtesub/controller/thruster_state" forces="/cirtesub/controller/thruster_manager/output"/>
-        <ros_base_link_transforms publish="true"/>
+		<ros_subscriber thrusters="/cirtesub/controller/thruster_setpoints_sim" forces="/cirtesub/controller/thruster_manager/input_stamped" servos="/cirtesub/alpha/desired_joint_states"/>
+		<ros_publisher thrusters="/cirtesub/controller/thruster_state" forces="/cirtesub/controller/thruster_manager/output" servos="/cirtesub/stonefish/alpha/joint_states"/>        <ros_base_link_transforms publish="true"/>
 	</robot>
 </scenario>
