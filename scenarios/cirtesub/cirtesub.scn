@@ -7,6 +7,7 @@
 
 	<looks>
 		<look name="blue" rgb="0.0 0.3 0.8" roughness="0.0"/>
+		<look name="green" rgb="0.0 0.7 0.2" roughness="0.3"/>
         <look name="transparent" gray="1.0" roughness="0.0" metalness="0.0"/>
         <look name="yellow" rgb="1.0 0.0 0.0" roughness="1.0"/>
 		<look name="black" gray="0.01" roughness="0.3" metalness="0.2" />
@@ -22,6 +23,20 @@
 				</physical>
 				<visual>
 					<mesh filename="cirtesub/base_down.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</visual>
+				<material name="Polyamid"/>
+				<mass value="1.891"/>
+				<look name="gray"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</external_part>
+			<external_part name="base_down_2" type="model" physics="submerged" buoyant="false">
+				<physical>
+					<mesh filename="cirtesub/base_down_2_phy.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</physical>
+				<visual>
+					<mesh filename="cirtesub/base_down_2.obj" scale="1.0"/>
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</visual>
 				<material name="Polyamid"/>
@@ -85,6 +100,62 @@
 				<look name="gray"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</external_part>
+			<external_part name="base_viga_2_1" type="model" physics="submerged" buoyant="false">
+				<physical>
+					<mesh filename="cirtesub/base_viga_2_1_phy.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</physical>
+				<visual>
+					<mesh filename="cirtesub/base_viga_2_1.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</visual>
+				<material name="Polyamid"/>
+				<mass value="0.1"/>
+				<look name="gray"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</external_part>
+			<external_part name="base_viga_2_2" type="model" physics="submerged" buoyant="false">
+				<physical>
+					<mesh filename="cirtesub/base_viga_2_2_phy.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</physical>
+				<visual>
+					<mesh filename="cirtesub/base_viga_2_2.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</visual>
+				<material name="Polyamid"/>
+				<mass value="0.1"/>
+				<look name="gray"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</external_part>
+			<external_part name="base_viga_2_3" type="model" physics="submerged" buoyant="false">
+				<physical>
+					<mesh filename="cirtesub/base_viga_2_3_phy.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</physical>
+				<visual>
+					<mesh filename="cirtesub/base_viga_2_3.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</visual>
+				<material name="Polyamid"/>
+				<mass value="0.1"/>
+				<look name="gray"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</external_part>
+			<external_part name="base_viga_2_4" type="model" physics="submerged" buoyant="false">
+				<physical>
+					<mesh filename="cirtesub/base_viga_2_4_phy.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</physical>
+				<visual>
+					<mesh filename="cirtesub/base_viga_2_4.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</visual>
+				<material name="Polyamid"/>
+				<mass value="0.1"/>
+				<look name="gray"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</external_part>
 			<external_part name="base_top" type="model" physics="submerged" buoyant="false">
 				<physical>
 					<mesh filename="cirtesub/base_top_phy.obj" scale="1.0"/>
@@ -127,6 +198,35 @@
 				<look name="black"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</external_part>
+			<external_part name="tubos_down_2" type="model" physics="submerged" buoyant="false">
+				<physical>
+					<mesh filename="cirtesub/tubos_down_2_phy.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</physical>
+				<visual>
+					<mesh filename="cirtesub/tubos_down_2.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</visual>
+				<material name="Polyamid"/>
+				<mass value="3.9"/>
+				<look name="transparent"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</external_part>
+			<external_part name="tubos_down_2_detalles" type="model" physics="submerged" buoyant="false">
+				<physical>
+					<mesh filename="cirtesub/tubos_down_2_detalles_phy.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</physical>
+				<visual>
+					<mesh filename="cirtesub/tubos_down_2_detalles.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</visual>
+				<material name="Polyamid"/>
+				<mass value="0.7"/>
+				<look name="black"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</external_part>
+
 			<external_part name="box_right" type="model" physics="submerged" buoyant="false">
 				<physical>
 					<mesh filename="cirtesub/box_right_phy.obj" scale="1.0"/>
@@ -165,7 +265,7 @@
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</visual>
 				<material name="Polyamid"/>
-				<mass value="1.0"/>
+				<mass value="0.1"/>
 				<look name="black"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</external_part>
@@ -179,18 +279,18 @@
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</visual>
 				<material name="Polyamid"/>
-				<mass value="1.0"/>
+				<mass value="0.1"/>
 				<look name="black"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</external_part>
 			<!-- Tapas flotabilidad -->
 			<external_part name="flotar_1" type="model" physics="submerged" buoyant="true">
 				<physical>
-					<mesh filename="cirtesub/flotar_1_phy.obj" scale="1.0"/>
+					<mesh filename="cirtesub/flotar_1_v2_phy.obj" scale="1.0"/>
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</physical>
 				<visual>
-					<mesh filename="cirtesub/flotar_1.obj" scale="1.0"/>
+					<mesh filename="cirtesub/flotar_1_v2.obj" scale="1.0"/>
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</visual>
 				<material name="Foam"/>
@@ -200,11 +300,11 @@
 			</external_part>
 			<external_part name="flotar_2" type="model" physics="submerged" buoyant="true">
 				<physical>
-					<mesh filename="cirtesub/flotar_2_phy.obj" scale="1.0"/>
+					<mesh filename="cirtesub/flotar_2_v2_phy.obj" scale="1.0"/>
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</physical>
 				<visual>
-					<mesh filename="cirtesub/flotar_2.obj" scale="1.0"/>
+					<mesh filename="cirtesub/flotar_2_v2.obj" scale="1.0"/>
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</visual>
 				<material name="Foam"/>
@@ -214,11 +314,11 @@
 			</external_part>
 			<external_part name="flotar_3" type="model" physics="submerged" buoyant="true">
 				<physical>
-					<mesh filename="cirtesub/flotar_3_phy.obj" scale="1.0"/>
+					<mesh filename="cirtesub/flotar_3_v2_phy.obj" scale="1.0"/>
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</physical>
 				<visual>
-					<mesh filename="cirtesub/flotar_3.obj" scale="1.0"/>
+					<mesh filename="cirtesub/flotar_3_v2.obj" scale="1.0"/>
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</visual>
 				<material name="Foam"/>
@@ -228,11 +328,11 @@
 			</external_part>
 			<external_part name="flotar_4" type="model" physics="submerged" buoyant="true">
 				<physical>
-					<mesh filename="cirtesub/flotar_4_phy.obj" scale="1.0"/>
+					<mesh filename="cirtesub/flotar_4_v2_phy.obj" scale="1.0"/>
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</physical>
 				<visual>
-					<mesh filename="cirtesub/flotar_4.obj" scale="1.0"/>
+					<mesh filename="cirtesub/flotar_4_v2.obj" scale="1.0"/>
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</visual>
 				<material name="Foam"/>
@@ -242,11 +342,11 @@
 			</external_part>
 			<external_part name="flotar_5" type="model" physics="submerged" buoyant="true">
 				<physical>
-					<mesh filename="cirtesub/flotar_5_phy.obj" scale="1.0"/>
+					<mesh filename="cirtesub/flotar_5_v2_phy.obj" scale="1.0"/>
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</physical>
 				<visual>
-					<mesh filename="cirtesub/flotar_5.obj" scale="1.0"/>
+					<mesh filename="cirtesub/flotar_5_v2.obj" scale="1.0"/>
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</visual>
 				<material name="Foam"/>
@@ -256,11 +356,11 @@
 			</external_part>
 			<external_part name="flotar_6" type="model" physics="submerged" buoyant="true">
 				<physical>
-					<mesh filename="cirtesub/flotar_6_phy.obj" scale="1.0"/>
+					<mesh filename="cirtesub/flotar_6_v2_phy.obj" scale="1.0"/>
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</physical>
 				<visual>
-					<mesh filename="cirtesub/flotar_6.obj" scale="1.0"/>
+					<mesh filename="cirtesub/flotar_6_v2.obj" scale="1.0"/>
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</visual>
 				<material name="Foam"/>
@@ -270,11 +370,11 @@
 			</external_part>
 			<external_part name="flotar_7" type="model" physics="submerged" buoyant="true">
 				<physical>
-					<mesh filename="cirtesub/flotar_7_phy.obj" scale="1.0"/>
+					<mesh filename="cirtesub/flotar_7_v2_phy.obj" scale="1.0"/>
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</physical>
 				<visual>
-					<mesh filename="cirtesub/flotar_7.obj" scale="1.0"/>
+					<mesh filename="cirtesub/flotar_7_v2.obj" scale="1.0"/>
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</visual>
 				<material name="Foam"/>
@@ -284,11 +384,11 @@
 			</external_part>
 			<external_part name="flotar_8" type="model" physics="submerged" buoyant="true">
 				<physical>
-					<mesh filename="cirtesub/flotar_8_phy.obj" scale="1.0"/>
+					<mesh filename="cirtesub/flotar_8_v2_phy.obj" scale="1.0"/>
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</physical>
 				<visual>
-					<mesh filename="cirtesub/flotar_8.obj" scale="1.0"/>
+					<mesh filename="cirtesub/flotar_8_v2.obj" scale="1.0"/>
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</visual>
 				<material name="Polyamid"/>
@@ -296,7 +396,62 @@
 				<look name="blue"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</external_part>
-
+			<external_part name="flotar_up_1" type="model" physics="submerged" buoyant="true">
+				<physical>
+					<mesh filename="cirtesub/flotar_up_1_phy.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</physical>
+				<visual>
+					<mesh filename="cirtesub/flotar_up_1.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</visual>
+				<material name="Foam"/>
+				<mass value="0.16"/>
+				<look name="blue"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</external_part>
+			<external_part name="flotar_up_2" type="model" physics="submerged" buoyant="true">
+				<physical>
+					<mesh filename="cirtesub/flotar_up_2_phy.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</physical>
+				<visual>
+					<mesh filename="cirtesub/flotar_up_2.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</visual>
+				<material name="Foam"/>
+				<mass value="0.16"/>
+				<look name="blue"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</external_part>
+			<external_part name="flotar_up_3" type="model" physics="submerged" buoyant="true">
+				<physical>
+					<mesh filename="cirtesub/flotar_up_3_phy.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</physical>
+				<visual>
+					<mesh filename="cirtesub/flotar_up_3.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</visual>
+				<material name="Foam"/>
+				<mass value="0.16"/>
+				<look name="blue"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</external_part>
+			<external_part name="flotar_up_4" type="model" physics="submerged" buoyant="true">
+				<physical>
+					<mesh filename="cirtesub/flotar_up_4_phy.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</physical>
+				<visual>
+					<mesh filename="cirtesub/flotar_up_4.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</visual>
+				<material name="Foam"/>
+				<mass value="0.16"/>
+				<look name="blue"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</external_part>
 			<!-- Parte externa thrusters -->
 			<external_part name="duct_up_front" type="model" physics="submerged" buoyant="false">
 				<physical>
@@ -410,6 +565,90 @@
 				<look name="black"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</external_part>
+			<external_part name="dvl" type="model" physics="submerged" buoyant="false">
+				<physical>
+					<mesh filename="cirtesub/dvl_phy.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</physical>
+				<visual>
+					<mesh filename="cirtesub/dvl.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</visual>
+				<material name="Polyamid"/>
+				<mass value="0.5"/>
+				<look name="black"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</external_part>
+			<external_part name="camera_down" type="model" physics="submerged" buoyant="false">
+				<physical>
+					<mesh filename="cirtesub/camera_down_phy.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</physical>
+				<visual>
+					<mesh filename="cirtesub/camera_down.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</visual>
+				<material name="Polyamid"/>
+				<mass value="0.2"/>
+				<look name="green"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</external_part>
+			<external_part name="camera_left" type="model" physics="submerged" buoyant="false">
+				<physical>
+					<mesh filename="cirtesub/left_camera_phy.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</physical>
+				<visual>
+					<mesh filename="cirtesub/left_camera.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</visual>
+				<material name="Polyamid"/>
+				<mass value="0.2"/>
+				<look name="black"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</external_part>
+			<external_part name="camera_right" type="model" physics="submerged" buoyant="false">
+				<physical>
+					<mesh filename="cirtesub/right_camera_phy.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</physical>
+				<visual>
+					<mesh filename="cirtesub/right_camera.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</visual>
+				<material name="Polyamid"/>
+				<mass value="0.2"/>
+				<look name="black"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</external_part>
+			<external_part name="mount_right_arm" type="model" physics="submerged" buoyant="false">
+				<physical>
+					<mesh filename="cirtesub/mount_right_arm_phy.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</physical>
+				<visual>
+					<mesh filename="cirtesub/mount_right_arm.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</visual>
+				<material name="Polyamid"/>
+				<mass value="0.1"/>
+				<look name="black"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</external_part>
+			<external_part name="mount_left_arm" type="model" physics="submerged" buoyant="false">
+				<physical>
+					<mesh filename="cirtesub/mount_left_arm_phy.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</physical>
+				<visual>
+					<mesh filename="cirtesub/mount_left_arm.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</visual>
+				<material name="Polyamid"/>
+				<mass value="0.1"/>
+				<look name="black"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</external_part>
 			<!-- Partes flotantes -->
 			<internal_part name="aire_caja_1" type="model" physics="submerged" buoyant="false">
 				<physical>
@@ -438,261 +677,165 @@
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</internal_part>
 			<internal_part name="flotar1" type="cylinder" physics="submerged" buoyant="true">
-				<dimensions radius="0.05" height="0.2"/>
-				<origin rpy="-1.57 0.0 1.08" xyz="-0.273786 -0.121939 0.204755"/>
+				<dimensions radius="0.074" height="0.2"/>
+				<origin rpy="-1.57 0.0 1.08" xyz="-0.273786 -0.121939 0.229401"/>
 				<material name="Foam"/>
 				<mass value="0.08"/>
 				<look name="manipulator"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</internal_part> 
 			<internal_part name="flotar2" type="cylinder" physics="submerged" buoyant="true">
-				<dimensions radius="0.05" height="0.2"/>
-				<origin rpy="-1.57 0.0 -1.08" xyz="-0.273786 0.160872 0.204755"/>
+				<dimensions radius="0.074" height="0.2"/>
+				<origin rpy="-1.57 0.0 -1.08" xyz="-0.273786 0.160872 0.229401"/>
 				<material name="Foam"/>
 				<mass value="0.08"/>
 				<look name="manipulator"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</internal_part> 
 			<internal_part name="flotar3" type="cylinder" physics="submerged" buoyant="true">
-				<dimensions radius="0.05" height="0.2"/>
-				<origin rpy="1.57 0.0 -1.08" xyz="0.287265 -0.121939 0.204755"/>
+				<dimensions radius="0.074" height="0.2"/>
+				<origin rpy="1.57 0.0 -1.08" xyz="0.287265 -0.121939 0.229401"/>
 				<material name="Foam"/>
 				<mass value="0.08"/>
 				<look name="manipulator"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</internal_part> 
 			<internal_part name="flotar4" type="cylinder" physics="submerged" buoyant="true">
-				<dimensions radius="0.05" height="0.2"/>
-				<origin rpy="1.57 0.0 1.08" xyz="0.287265 0.121939 0.204755"/>
+				<dimensions radius="0.074" height="0.2"/>
+				<origin rpy="1.57 0.0 1.08" xyz="0.287265 0.121939 0.229401"/>
 				<material name="Foam"/>
 				<mass value="0.08"/>
 				<look name="manipulator"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</internal_part> 
 			<internal_part name="flotar5" type="cylinder" physics="submerged" buoyant="true">
-				<dimensions radius="0.05" height="0.15"/>
-				<origin rpy="0.925025 1.57 0.0" xyz="-0.135511 -0.255895 0.204755"/>
+				<dimensions radius="0.074" height="0.15"/>
+				<origin rpy="0.925025 1.57 0.0" xyz="-0.135511 -0.255895 0.229401"/>
 				<material name="Foam"/>
 				<mass value="0.08"/>
 				<look name="manipulator"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</internal_part> 
 			<internal_part name="flotar6" type="cylinder" physics="submerged" buoyant="true">
-				<dimensions radius="0.05" height="0.15"/>
-				<origin rpy="-0.925025 1.57 0.0" xyz="0.145937 -0.255895 0.204755"/>
+				<dimensions radius="0.074" height="0.15"/>
+				<origin rpy="-0.925025 1.57 0.0" xyz="0.145937 -0.255895 0.229401"/>
 				<material name="Foam"/>
 				<mass value="0.08"/>
 				<look name="manipulator"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</internal_part> 
 			<internal_part name="flotar7" type="cylinder" physics="submerged" buoyant="true">
-				<dimensions radius="0.05" height="0.15"/>
-				<origin rpy="-0.925025 1.57 0.0" xyz="-0.135511 0.294901 0.204755"/>
+				<dimensions radius="0.074" height="0.15"/>
+				<origin rpy="-0.925025 1.57 0.0" xyz="-0.135511 0.294901 0.229401"/>
 				<material name="Foam"/>
 				<mass value="0.08"/>
 				<look name="manipulator"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</internal_part> 
 			<internal_part name="flotar8" type="cylinder" physics="submerged" buoyant="true">
-				<dimensions radius="0.05" height="0.15"/>
-				<origin rpy="0.925025 1.57 0.0" xyz="0.145937 0.294901 0.204755"/>
+				<dimensions radius="0.074" height="0.15"/>
+				<origin rpy="0.925025 1.57 0.0" xyz="0.145937 0.294901 0.229401"/>
 				<material name="Foam"/>
 				<mass value="0.08"/>
 				<look name="manipulator"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</internal_part> 
-			<internal_part name="flotar1" type="cylinder" physics="submerged" buoyant="true">
-				<dimensions radius="0.05" height="0.2"/>
-				<origin rpy="-1.57 0.0 1.08" xyz="-0.273786 -0.121939 0.204755"/>
+			<internal_part name="flotar1_2" type="cylinder" physics="submerged" buoyant="true">
+				<dimensions radius="0.074" height="0.2"/>
+				<origin rpy="-1.57 0.0 1.08" xyz="-0.273786 -0.121939 0.229401"/>
 				<material name="Foam"/>
 				<mass value="0.08"/>
 				<look name="manipulator"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</internal_part> 
-			<internal_part name="flotar2" type="cylinder" physics="submerged" buoyant="true">
-				<dimensions radius="0.05" height="0.2"/>
-				<origin rpy="-1.57 0.0 -1.08" xyz="-0.273786 0.160872 0.204755"/>
+			<internal_part name="flotar2_2" type="cylinder" physics="submerged" buoyant="true">
+				<dimensions radius="0.074" height="0.2"/>
+				<origin rpy="-1.57 0.0 -1.08" xyz="-0.273786 0.160872 0.229401"/>
 				<material name="Foam"/>
 				<mass value="0.08"/>
 				<look name="manipulator"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</internal_part> 
-			<internal_part name="flotar3" type="cylinder" physics="submerged" buoyant="true">
-				<dimensions radius="0.05" height="0.2"/>
-				<origin rpy="1.57 0.0 -1.08" xyz="0.287265 -0.121939 0.204755"/>
+			<internal_part name="flotar3_2" type="cylinder" physics="submerged" buoyant="true">
+				<dimensions radius="0.074" height="0.2"/>
+				<origin rpy="1.57 0.0 -1.08" xyz="0.287265 -0.121939 0.229401"/>
 				<material name="Foam"/>
 				<mass value="0.08"/>
 				<look name="manipulator"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</internal_part> 
-			<internal_part name="flotar4" type="cylinder" physics="submerged" buoyant="true">
-				<dimensions radius="0.05" height="0.2"/>
-				<origin rpy="1.57 0.0 1.08" xyz="0.287265 0.121939 0.204755"/>
+			<internal_part name="flotar4_2" type="cylinder" physics="submerged" buoyant="true">
+				<dimensions radius="0.074" height="0.2"/>
+				<origin rpy="1.57 0.0 1.08" xyz="0.287265 0.121939 0.229401"/>
 				<material name="Foam"/>
 				<mass value="0.08"/>
 				<look name="manipulator"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</internal_part> 
-			<internal_part name="flotar5" type="cylinder" physics="submerged" buoyant="true">
-				<dimensions radius="0.05" height="0.15"/>
-				<origin rpy="0.925025 1.57 0.0" xyz="-0.135511 -0.255895 0.204755"/>
+			<internal_part name="flotar5_2" type="cylinder" physics="submerged" buoyant="true">
+				<dimensions radius="0.074" height="0.15"/>
+				<origin rpy="0.925025 1.57 0.0" xyz="-0.135511 -0.255895 0.229401"/>
 				<material name="Foam"/>
 				<mass value="0.08"/>
 				<look name="manipulator"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</internal_part> 
-			<internal_part name="flotar6" type="cylinder" physics="submerged" buoyant="true">
-				<dimensions radius="0.05" height="0.15"/>
-				<origin rpy="-0.925025 1.57 0.0" xyz="0.145937 -0.255895 0.204755"/>
+			<internal_part name="flotar6_2" type="cylinder" physics="submerged" buoyant="true">
+				<dimensions radius="0.074" height="0.15"/>
+				<origin rpy="-0.925025 1.57 0.0" xyz="0.145937 -0.255895 0.229401"/>
 				<material name="Foam"/>
 				<mass value="0.08"/>
 				<look name="manipulator"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</internal_part> 
-			<internal_part name="flotar7" type="cylinder" physics="submerged" buoyant="true">
-				<dimensions radius="0.05" height="0.15"/>
-				<origin rpy="-0.925025 1.57 0.0" xyz="-0.135511 0.294901 0.204755"/>
+			<internal_part name="flotar7_2" type="cylinder" physics="submerged" buoyant="true">
+				<dimensions radius="0.074" height="0.15"/>
+				<origin rpy="-0.925025 1.57 0.0" xyz="-0.135511 0.294901 0.229401"/>
 				<material name="Foam"/>
 				<mass value="0.08"/>
 				<look name="manipulator"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</internal_part> 
-			<internal_part name="flotar8" type="cylinder" physics="submerged" buoyant="true">
-				<dimensions radius="0.05" height="0.15"/>
-				<origin rpy="0.925025 1.57 0.0" xyz="0.145937 0.294901 0.204755"/>
+			<internal_part name="flotar8_2" type="cylinder" physics="submerged" buoyant="true">
+				<dimensions radius="0.074" height="0.15"/>
+				<origin rpy="0.925025 1.57 0.0" xyz="0.145937 0.294901 0.229401"/>
 				<material name="Foam"/>
 				<mass value="0.08"/>
 				<look name="manipulator"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</internal_part> 
-			<internal_part name="flotar1" type="cylinder" physics="submerged" buoyant="true">
-				<dimensions radius="0.05" height="0.2"/>
-				<origin rpy="-1.57 0.0 1.08" xyz="-0.273786 -0.121939 0.204755"/>
+			<internal_part name="flotar_up_cilindro_1" type="cylinder" physics="submerged" buoyant="true">
+				<dimensions radius="0.10" height="0.035"/>
+				<origin rpy="0.0 0.0 0.0" xyz="-0.108233 -0.085150 0.285901"/>
 				<material name="Foam"/>
 				<mass value="0.08"/>
 				<look name="manipulator"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
-			</internal_part> 
-			<internal_part name="flotar2" type="cylinder" physics="submerged" buoyant="true">
-				<dimensions radius="0.05" height="0.2"/>
-				<origin rpy="-1.57 0.0 -1.08" xyz="-0.273786 0.160872 0.204755"/>
+			</internal_part>
+			<internal_part name="flotar_up_cilindro_2" type="cylinder" physics="submerged" buoyant="true">
+				<dimensions radius="0.10" height="0.035"/>
+				<origin rpy="0.0 0.0 0.0" xyz="0.108167 -0.085150 0.285901"/>
 				<material name="Foam"/>
 				<mass value="0.08"/>
 				<look name="manipulator"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
-			</internal_part> 
-			<internal_part name="flotar3" type="cylinder" physics="submerged" buoyant="true">
-				<dimensions radius="0.05" height="0.2"/>
-				<origin rpy="1.57 0.0 -1.08" xyz="0.287265 -0.121939 0.204755"/>
+			</internal_part>
+			<internal_part name="flotar_up_cilindro_3" type="cylinder" physics="submerged" buoyant="true">
+				<dimensions radius="0.10" height="0.035"/>
+				<origin rpy="0.0 0.0 0.0" xyz="0.108167 0.124850 0.285901"/>
 				<material name="Foam"/>
 				<mass value="0.08"/>
 				<look name="manipulator"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
-			</internal_part> 
-			<internal_part name="flotar4" type="cylinder" physics="submerged" buoyant="true">
-				<dimensions radius="0.05" height="0.2"/>
-				<origin rpy="1.57 0.0 1.08" xyz="0.287265 0.121939 0.204755"/>
+			</internal_part>
+			<internal_part name="flotar_up_cilindro_4" type="cylinder" physics="submerged" buoyant="true">
+				<dimensions radius="0.10" height="0.035"/>
+				<origin rpy="0.0 0.0 0.0" xyz="-0.108233 0.124850 0.285901"/>
 				<material name="Foam"/>
 				<mass value="0.08"/>
 				<look name="manipulator"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
-			</internal_part> 
-			<internal_part name="flotar5" type="cylinder" physics="submerged" buoyant="true">
-				<dimensions radius="0.05" height="0.15"/>
-				<origin rpy="0.925025 1.57 0.0" xyz="-0.135511 -0.255895 0.204755"/>
-				<material name="Foam"/>
-				<mass value="0.08"/>
-				<look name="manipulator"/>
-				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
-			</internal_part> 
-			<internal_part name="flotar6" type="cylinder" physics="submerged" buoyant="true">
-				<dimensions radius="0.05" height="0.15"/>
-				<origin rpy="-0.925025 1.57 0.0" xyz="0.145937 -0.255895 0.204755"/>
-				<material name="Foam"/>
-				<mass value="0.08"/>
-				<look name="manipulator"/>
-				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
-			</internal_part> 
-			<internal_part name="flotar7" type="cylinder" physics="submerged" buoyant="true">
-				<dimensions radius="0.05" height="0.15"/>
-				<origin rpy="-0.925025 1.57 0.0" xyz="-0.135511 0.294901 0.204755"/>
-				<material name="Foam"/>
-				<mass value="0.08"/>
-				<look name="manipulator"/>
-				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
-			</internal_part> 
-			<internal_part name="flotar8" type="cylinder" physics="submerged" buoyant="true">
-				<dimensions radius="0.05" height="0.15"/>
-				<origin rpy="0.925025 1.57 0.0" xyz="0.145937 0.294901 0.204755"/>
-				<material name="Foam"/>
-				<mass value="0.08"/>
-				<look name="manipulator"/>
-				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
-			</internal_part> 
-			<internal_part name="flotar1" type="cylinder" physics="submerged" buoyant="true">
-				<dimensions radius="0.05" height="0.2"/>
-				<origin rpy="-1.57 0.0 1.08" xyz="-0.273786 -0.121939 0.204755"/>
-				<material name="Foam"/>
-				<mass value="0.08"/>
-				<look name="manipulator"/>
-				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
-			</internal_part> 
-			<internal_part name="flotar2" type="cylinder" physics="submerged" buoyant="true">
-				<dimensions radius="0.05" height="0.2"/>
-				<origin rpy="-1.57 0.0 -1.08" xyz="-0.273786 0.160872 0.204755"/>
-				<material name="Foam"/>
-				<mass value="0.08"/>
-				<look name="manipulator"/>
-				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
-			</internal_part> 
-			<internal_part name="flotar3" type="cylinder" physics="submerged" buoyant="true">
-				<dimensions radius="0.05" height="0.2"/>
-				<origin rpy="1.57 0.0 -1.08" xyz="0.287265 -0.121939 0.204755"/>
-				<material name="Foam"/>
-				<mass value="0.08"/>
-				<look name="manipulator"/>
-				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
-			</internal_part> 
-			<internal_part name="flotar4" type="cylinder" physics="submerged" buoyant="true">
-				<dimensions radius="0.05" height="0.2"/>
-				<origin rpy="1.57 0.0 1.08" xyz="0.287265 0.121939 0.204755"/>
-				<material name="Foam"/>
-				<mass value="0.08"/>
-				<look name="manipulator"/>
-				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
-			</internal_part> 
-			<internal_part name="flotar5" type="cylinder" physics="submerged" buoyant="true">
-				<dimensions radius="0.05" height="0.15"/>
-				<origin rpy="0.925025 1.57 0.0" xyz="-0.135511 -0.255895 0.204755"/>
-				<material name="Foam"/>
-				<mass value="0.08"/>
-				<look name="manipulator"/>
-				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
-			</internal_part> 
-			<internal_part name="flotar6" type="cylinder" physics="submerged" buoyant="true">
-				<dimensions radius="0.05" height="0.15"/>
-				<origin rpy="-0.925025 1.57 0.0" xyz="0.145937 -0.255895 0.204755"/>
-				<material name="Foam"/>
-				<mass value="0.08"/>
-				<look name="manipulator"/>
-				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
-			</internal_part> 
-			<internal_part name="flotar7" type="cylinder" physics="submerged" buoyant="true">
-				<dimensions radius="0.05" height="0.15"/>
-				<origin rpy="-0.925025 1.57 0.0" xyz="-0.135511 0.294901 0.204755"/>
-				<material name="Foam"/>
-				<mass value="0.08"/>
-				<look name="manipulator"/>
-				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
-			</internal_part> 
-			<internal_part name="flotar8" type="cylinder" physics="submerged" buoyant="true">
-				<dimensions radius="0.05" height="0.15"/>
-				<origin rpy="0.925025 1.57 0.0" xyz="0.145937 0.294901 0.204755"/>
-				<material name="Foam"/>
-				<mass value="0.08"/>
-				<look name="manipulator"/>
-				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
-			</internal_part> 
+			</internal_part>
 		</base_link>
 
 		<actuator name="Thruster_up_left" type="thruster">
@@ -874,6 +1017,42 @@
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 			<ros_publisher topic="/cirtesub/odometry"/>
 			<link name="Vehicle"/>
+		</sensor>
+
+		<!-- Water Linked DVL A50, aligned with the underside of dvl.obj. -->
+		<sensor name="dvl" rate="10.0" type="dvl">
+			<specs beam_angle="22.5" beam_positive_z="false"/>
+			<range velocity="3.75 3.75 3.75" altitude_min="0.05" altitude_max="50.0"/>
+			<noise velocity_percent="1.01" velocity="0.0001" altitude="0.01"/>
+			<history samples="1"/>
+			<origin xyz="-0.175204 0.025424 -0.109382" rpy="0.0 0.0 0.0"/>
+			<link name="Vehicle"/>
+			<ros_publisher topic="/cirtesub/dvl" altitude_topic="/cirtesub/dvl/altitude"/>
+		</sensor>
+
+		<!-- StellarHD WetLink Fisheye: 1600x1200 at 60 fps; ~82 deg horizontal FOV in water.
+		     Stonefish renders a pinhole camera, so the fisheye distortion is not simulated. -->
+		<sensor name="camera_left" rate="60.0" type="camera">
+			<specs resolution_x="1600" resolution_y="1200" horizontal_fov="82.0"/>
+			<origin xyz="0.064934 -0.223 -0.028599" rpy="-1.5707963268 0.0 3.1415926536"/>
+			<link name="Vehicle"/>
+			<ros_publisher topic="/cirtesub/camera_left"/>
+		</sensor>
+
+		<sensor name="camera_right" rate="60.0" type="camera">
+			<specs resolution_x="1600" resolution_y="1200" horizontal_fov="82.0"/>
+			<origin xyz="-0.065057 -0.222 -0.028599" rpy="-1.5707963268 0.0 3.1415926536"/>
+			<link name="Vehicle"/>
+			<ros_publisher topic="/cirtesub/camera_right"/>
+		</sensor>
+
+		<!-- exploreHD downward camera: 1920x1080 at 30 fps; ~82 deg horizontal FOV in water.
+		     Stonefish renders a pinhole camera, so the fisheye distortion is not simulated. -->
+		<sensor name="camera_down" rate="30.0" type="camera">
+			<specs resolution_x="1920" resolution_y="1080" horizontal_fov="82.0"/>
+			<origin xyz="0.186484 -0.004132 -0.148599" rpy="3.1415926536 0.0 3.1415926536"/>
+			<link name="Vehicle"/>
+			<ros_publisher topic="/cirtesub/camera_down"/>
 		</sensor>
 
         <world_transform xyz="1.0 1.0 1.0" rpy="0.0 3.14 0.0"/>

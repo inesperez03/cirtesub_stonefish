@@ -959,6 +959,20 @@
 			<mass value="0.1"/>
 		</link>
 
+		<!-- <link name="rs1L" type="model" physics="submerged">
+			<physical>
+				<mesh filename="alpha/rs1_124_compl.obj" scale="1.0"/>
+				<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</physical>
+			<visual>
+				<mesh filename="alpha/rs1_124_compl.obj" scale="1.0"/>
+				<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</visual>
+			<material name="Neutral"/>
+			<look name="black"/>	
+			<mass value="0.1"/>
+		</link> -->
+
         <link name="rs1_124L" type="model" physics="submerged">
 			<physical>
 				<mesh filename="alpha/rs1_124_v2.obj" scale="1.0"/>
@@ -1040,7 +1054,7 @@
 			<limits min="0.0" max="3.22"/>
 		</joint>
 		
-		<joint name="alpha_axis_a1L" type="revolute">
+		 <joint name="alpha_axis_a1L" type="revolute">
 			<parent name="rs1_124L"/>
 			<child name="rs1_130L"/>
 			<origin rpy="3.14 0.0 0.0" xyz="0.0 0.0 -0.00"/>
@@ -1055,14 +1069,13 @@
 			<axis xyz="0.0 1.0 0.0"/>
 			<limits min="-0.5" max="0.125"/>
 		</joint>			
-			
+
 					
-	        <!--   ARM SERVOS   -->	
 		<actuator name="Servo5L" type="servo">
 			<joint name="alpha_axis_aL"/>
 			<controller position_gain="0.1" velocity_gain="1.0" max_torque="100.0"/>
 			<initial position="0.125"/>
-		</actuator> 
+		</actuator>
 
 		<actuator name="Servo4L" type="servo">
 			<joint name="alpha_axis_bL"/>
@@ -1073,28 +1086,237 @@
 		<actuator name="Servo3L" type="servo">
 			<joint name="alpha_axis_cL"/>
 			<controller position_gain="1.0" velocity_gain="1.0" max_torque="1000.0"/>
-			<initial position="0.5"/>
-		</actuator> 
+			<!-- <initial position="3.0"/> -->
+			<initial position="0.0"/>
+		</actuator>
 
 		<actuator name="Servo2L" type="servo">
 			<joint name="alpha_axis_dL"/>
 			<controller position_gain="1.0" velocity_gain="1.0" max_torque="1000.0"/>
-			<initial position="2.5"/>
-		</actuator> 
+			<!-- <initial position="2.5"/> -->
+			<initial position="0.0"/>
+		</actuator>
 
 		<actuator name="Servo1L" type="servo">
 			<joint name="alpha_axis_eL"/>
 			<controller position_gain="1.0" velocity_gain="1.0" max_torque="1000.0"/>
-			<initial position="3.1416"/>
+			<!-- <initial position="3.1416"/> -->
+			<initial position="0.0"/>
+		</actuator>
+
+		<!-- Links Alpha right-->
+        <link name="m3_inlineR" type="model" physics="submerged">
+			<physical>
+				<mesh filename="alpha/m3_inline2.obj" scale="1.0"/>
+				<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</physical>
+			<visual>
+				<mesh filename="alpha/m3_inline2.obj" scale="1.0"/>
+				<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</visual>
+			<material name="Neutral"/>
+			<look name="black"/>	
+		</link>
+
+        <link name="m2R" type="model" physics="submerged">
+			<physical>
+				<mesh filename="alpha/m2_v2.obj" scale="1.0"/>
+				<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</physical>
+			<visual>
+				<mesh filename="alpha/m2_v2.obj" scale="1.0"/>
+				<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</visual>
+			<material name="Neutral"/>
+			<mass value="0.3"/>
+			<look name="black"/>	
+		</link>
+
+       <link name="m2_1_1R" type="model" physics="submerged">
+			<physical>
+				<mesh filename="alpha/m2_1_1_v2.obj" scale="1.0"/>
+				<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</physical>
+			<visual>
+				<mesh filename="alpha/m2_1_1_v2.obj" scale="1.0"/>
+				<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</visual>
+			<material name="Neutral"/>
+			<look name="black"/>	
+		</link>
+		
+         <link name="m2_1_3R" type="model" physics="submerged">
+			<physical>
+				<mesh filename="alpha/m2_1_3_fin.obj" scale="1.0"/>
+				<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</physical>
+			<visual>
+				<mesh filename="alpha/m2_1_3_fin.obj" scale="1.0"/>
+				<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</visual>
+			<material name="Neutral"/>
+			<look name="black"/>	
+		</link>  
+
+        <link name="rs1R" type="model" physics="submerged">
+			<physical>
+				<mesh filename="alpha/rs1_v2.obj" scale="1.0"/>
+				<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</physical>
+			<visual>
+				<mesh filename="alpha/rs1_v2.obj" scale="1.0"/>
+				<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</visual>
+			<material name="Neutral"/>
+			<look name="black"/>	
+			<mass value="0.1"/>
+		</link>
+
+        <link name="rs1_124R" type="model" physics="submerged">
+			<physical>
+				<mesh filename="alpha/rs1_124_v2.obj" scale="1.0"/>
+				<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</physical>
+			<visual>
+				<mesh filename="alpha/rs1_124_v2.obj" scale="1.0"/>
+				<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</visual>
+			<material name="Polyamid"/>
+			<look name="gray"/>	
+			<mass value="0.5"/>
+		</link>
+				
+
+        <link name="rs1_130R" type="model" physics="submerged">
+			<physical>
+				<mesh filename="alpha/rs1_130_fin_v3.obj" scale="1.0"/>
+				<origin rpy="0.0 0.0 0.0" xyz="0.0075 0.0 0.0"/>
+			</physical>
+			<material name="Polyamid"/>
+			<look name="gray"/>	
+			<mass value="0.1"/>
+		</link>	
+		
+        <link name="rs1_139R" type="model" physics="submerged">
+			<physical>
+				<mesh filename="alpha/rs1_139_fin_v3.obj" scale="1.0"/>
+				<origin rpy="0.0 0.0 0.0" xyz="0.0075 0.0 0.0"/>
+			</physical>
+			<material name="Polyamid"/>
+			<look name="gray"/>	
+			<mass value="0.1"/>
+		</link>	
+		
+		<joint name="VehicleToArmR" type="fixed">
+			<parent name="Vehicle"/>
+			<child name="m3_inlineR"/>
+			<origin rpy="-1.57 0.0 -1.5708" xyz="-0.05 -0.210 -0.042158"/>
+			<!-- <origin rpy="-1.57 0.0 -1.5708" xyz="0.085818 -0.210 -0.042158"/> -->
+		</joint>
+
+		<joint name="alpha_axis_eR" type="revolute">
+			<parent name="m3_inlineR"/>
+			<child name="m2_1_1R"/>
+			<origin rpy="3.14 0.0 3.14" xyz="0.120683 -0.021096 -0.025"/>
+			<axis xyz="0.0 0.0 1.0"/>
+			<limits min="0" max="6.1"/>
+		</joint>
+		
+		<joint name="alpha_axis_dR" type="revolute">
+			<parent name="m2_1_1R"/>
+			<child name="m2R"/>
+			<origin rpy="0.0 1.92 0.0" xyz="0.023 0.0 0.033"/>
+			<axis xyz="0.0 -1.0 0.0"/>
+			<limits min="0.0" max="3.49"/>
+		</joint>
+		
+
+		<joint name="alpha_axis_cR" type="revolute">
+			<parent name="m2R"/>
+			<child name="m2_1_3R"/>
+			<origin rpy="0.0 2.8 0.0" xyz="0.13 -0.015 0.08"/>
+			<axis xyz="0.0 1.0 0.0"/>
+			<limits min="0.0" max="3.22"/>
+		</joint>
+		
+		<joint name="alpha_axis_c_3.1R" type="fixed">
+			<parent name="m2_1_3R"/>
+			<child name="rs1R"/>
+			<origin rpy="0.0 0.0 0.0" xyz="0.031 0.0165 -0.0225"/>
+			<axis xyz="0.0 -1.0 0.0"/>
+		</joint>
+
+		<joint name="alpha_axis_bR" type="revolute">
+			<parent name="rs1R"/>
+			<child name="rs1_124R"/>
+			<origin rpy="0.0 0.0 0.0" xyz="0.1025 0.0 0.0"/>
+			<axis xyz="1.0 0.0 0.0"/>
+			<limits min="0.0" max="3.22"/>
+		</joint>
+		
+		<joint name="alpha_axis_a1R" type="revolute">
+			<parent name="rs1_124R"/>
+			<child name="rs1_130R"/>
+			<origin rpy="3.14 0.0 0.0" xyz="0.0 0.0 -0.00"/>
+			<axis xyz="0.0 1.0 0.0"/>
+			<limits min="-0.5" max="0.5"/>
+		</joint>
+	
+		<joint name="alpha_axis_aR" type="revolute">
+			<parent name="rs1_124R"/>
+			<child name="rs1_139R"/>
+			<origin rpy="3.14 0.0 0.0" xyz="0.0 0.0 0.00"/>
+			<axis xyz="0.0 1.0 0.0"/>
+			<limits min="-0.5" max="0.125"/>
+		</joint>			
+			
+		<actuator name="Servo5R" type="servo">
+			<joint name="alpha_axis_aR"/>
+			<controller position_gain="0.1" velocity_gain="1.0" max_torque="100.0"/>
+			<initial position="0.125"/>
 		</actuator> 
 
+		<actuator name="Servo4R" type="servo">
+			<joint name="alpha_axis_bR"/>
+			<controller position_gain="1.0" velocity_gain="1.0" max_torque="100.0"/>
+			<initial position="0.0"/>
+		</actuator>
 
+		<actuator name="Servo3R" type="servo">
+			<joint name="alpha_axis_cR"/>
+			<controller position_gain="1.0" velocity_gain="1.0" max_torque="1000.0"/>
+			<initial position="0.0"/>
+		</actuator> 
+
+		<actuator name="Servo2R" type="servo">
+			<joint name="alpha_axis_dR"/>
+			<controller position_gain="1.0" velocity_gain="1.0" max_torque="1000.0"/>
+			<initial position="0.0"/>
+		</actuator>  
+
+		<actuator name="Servo1R" type="servo">
+			<joint name="alpha_axis_eR"/>
+			<controller position_gain="1.0" velocity_gain="1.0" max_torque="1000.0"/>
+			<initial position="0.0"/>
+		</actuator>
+
+		<sensor name="IMU" rate="10.0" type="imu">
+			<range angular_velocity="10.0 10.0 5.0" linear_acceleration="10.0"/>
+			<noise angle="0.1 0.1 0.5" angular_velocity="0.05" yaw_drift="0.001" linear_acceleration="0.1"/>
+			<history samples="1"/>
+			<origin xyz="0.1 0.0 0.0" rpy="0.0 0.0 0.0"/>
+			<link name="Vehicle"/>
+		</sensor>
+
+		<sensor name="Odometry" rate="30.0" type="odometry">
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+			<ros_publisher topic="/cirtesub/odometry"/>
+			<link name="Vehicle"/>
+		</sensor>
 
         <world_transform xyz="1.0 1.0 1.0" rpy="0.0 3.14 0.0"/>
 
         <!-- Publicación de TF dinámico del base_link -->
-		<!-- <ros_subscriber servos="/pez/servo_commands"/>
-		<ros_publisher servos="/pez/joint_states"/> -->
 		<ros_subscriber thrusters="/cirtesub/controller/thruster_setpoints_sim" forces="/cirtesub/controller/thruster_manager/input_stamped" servos="/cirtesub/alpha/desired_joint_states"/>
 		<ros_publisher thrusters="/cirtesub/controller/thruster_state" forces="/cirtesub/controller/thruster_manager/output" servos="/cirtesub/joint_states"/>
         <ros_base_link_transforms publish="true"/>

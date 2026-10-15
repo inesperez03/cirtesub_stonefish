@@ -102,43 +102,10 @@ def generate_launch_description():
         ]
     )
 
-    rsp_node_cirtesub = Node(
-        package="robot_state_publisher",
-        executable="robot_state_publisher",
-        name="robot_state_publisher_cirtesub",
-        output="screen",
-        parameters=[{
-            "robot_description": Command(["cat ", urdf_file_fish])
-        }],
-        remappings=[
-            ("/robot_description", "/cirtesub/robot_description")
-        ],
-    )
 
-    rsp_node_cirtesu = Node(
-        package='robot_state_publisher',
-        executable='robot_state_publisher',
-        output='screen',
-        name='robot_state_publisher_cirtesu',
-        remappings=[('/robot_description', '/cirtesu/robot_description')],
-        parameters=[{
-            'robot_description': robot_description_cirtesu
-        }]
-    )
-
-    rviz_node = Node(
-        package="rviz2",
-        executable="rviz2",
-        name="rviz2",
-        output="screen",
-        arguments=["-d", rviz_config_file],
-    )
 
     return LaunchDescription([
         namespace_action,
-        rsp_node_cirtesub,
-        rsp_node_cirtesu,
-        rviz_node,
         odom_tf_node,
         static_transform_publisher_node,
         cirtesu_static_tf
