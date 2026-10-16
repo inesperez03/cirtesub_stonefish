@@ -18,6 +18,8 @@
   <depend>sura_msgs</depend>
   <depend>cirtesub_description</depend>
 
+  <exec_depend>stonefish_net</exec_depend>
+
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
 

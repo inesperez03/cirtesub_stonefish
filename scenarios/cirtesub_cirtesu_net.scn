@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!-- CIRTESUB y los Alpha en el tanque CIRTESU con la red deformable.
+     stonefish_net_simulator añade la red, las boyas y los fondeos desde cirtesub_net.yaml. -->
+<scenario>
+    <include file="$(find cirtesub_stonefish)/scenarios/cirtesub_cirtesu_arucos.scn"/>
+
+    <!-- Sin otro bloque de materiales: se conservan los del escenario original.
+         El simulador crea los materiales de las boyas y los bloques si faltan. -->
+    <looks>
+        <look name="net_twine" rgb="0.00 0.00 0.00" roughness="0.9"/>
+        <look name="net_rope" rgb="0.00 0.00 0.00" roughness="0.9"/>
+        <look name="net_lead" gray="0.0" roughness="0.6" metalness="0.3"/>
+        <look name="net_concrete" gray="0.6" roughness="1.0"/>
+        <look name="net_buoy" rgb="1.0 1.0 1.0" roughness="0.4" texture="$(find stonefish_net)/data/buoy/buoy.png"/>
+    </looks>
+</scenario>

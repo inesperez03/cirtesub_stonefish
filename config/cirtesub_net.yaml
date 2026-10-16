@@ -1,0 +1,21 @@
+# Red deformable para CIRTESUB y los brazos Alpha en el tanque CIRTESU.
+# Metros, kilogramos, NED del mundo de Stonefish (z hacia abajo).
+net:        {width: 6.0, height: 4.0, bar: 0.07, opening_deg: 90, twine_diameter: 0.0025, twine_density: 1140}
+pose:       {x: -5.0, y_center: 0.0, z_top: 0.35}   # relinga superior; boyas 20 cm por encima, en la superficie
+frame_rope: {diameter: 0.02, density: 950}
+leads:      {spacing: 0.5, mass: 0.5}
+buoys:      {spacing: 2.0, dropper: 0.20, mass: 0.5}   # boya hueca: ~5,8 kg de empuje neto
+# Fondeo: ancla en el suelo, upstream hacia -x y outward hacia fuera en y de su esquina.
+# bottom: esquinas inferiores (con holgura); top: superiores (tensas: mantienen la red abierta a lo ancho)
+mooring:    {floor_z: 4.8, upstream: 1.0, block_height: 0.20,
+             bottom: {outward: 0.5, slack: 1.05}, top: {outward: 1.0, slack: 1.0}}
+hydro:      {cn: 1.2, ct: 0.01, added_mass: 1.0, water_density: 1000.0}
+# friction: rozamiento con el suelo; el de los robots lo define robot_contact_auto.
+solver:     {iterations: 10, contact_hardness: 0.3, margin: 0.005, damping: 0.01, friction: 0.5}
+# Agujeros aleatorios reproducibles; damage_seed del launch permite cambiar la semilla.
+damage:     {seed: 1, tears: 3, tear_min_meshes: 2, tear_max_meshes: 15, stub_fraction: 0.3, loose_fraction: 0.01}
+# Sin cajas del BlueROV: calcular la envolvente de cada enlace de CIRTESUB y ambos Alpha.
+robot_contact: []
+robot_contact_auto: {enabled: true, rounding_fraction: 0.15, friction: 0.5}
+# Resumen por segundo en stderr (velocidades, nudos en el suelo, boyas).
+diagnostics: {enabled: false}
