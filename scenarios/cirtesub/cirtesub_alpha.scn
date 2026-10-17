@@ -1482,19 +1482,19 @@
 			<link name="Vehicle"/>
 		</sensor>
 
-		<!-- <sensor name="camera_left" rate="60.0" type="camera">
-			<specs resolution_x="1600" resolution_y="1200" horizontal_fov="82.0"/>
+		<sensor name="camera_left" rate="10.0" type="camera">
+			<specs resolution_x="800" resolution_y="600" horizontal_fov="82.0"/>
 			<origin xyz="0.064934 -0.223 -0.028599" rpy="-1.5707963268 0.0 3.1415926536"/>
 			<link name="Vehicle"/>
 			<ros_publisher topic="/cirtesub/stonefish/left_camera"/>
 		</sensor>
 
-		<sensor name="camera_right" rate="60.0" type="camera">
-			<specs resolution_x="1600" resolution_y="1200" horizontal_fov="82.0"/>
+		<sensor name="camera_right" rate="10.0" type="camera">
+			<specs resolution_x="800" resolution_y="600" horizontal_fov="82.0"/>
 			<origin xyz="-0.065057 -0.222 -0.028599" rpy="-1.5707963268 0.0 3.1415926536"/>
 			<link name="Vehicle"/>
 			<ros_publisher topic="/cirtesub/stonefish/right_camera"/>
-		</sensor> -->
+		</sensor>
 
         <world_transform xyz="1.0 1.0 1.0" rpy="0.0 3.14 0.0"/>
 
